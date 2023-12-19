@@ -18,15 +18,32 @@
 /* top-bar styles */
 header .top-bar{
     height:45px;
+    background-color:var(--dark);
     color:var(--light);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 3em;
+    
 }
-.top-bar .address{
-    background-color:#FE8800;
+/* left-side address area in top bar */
+.top-bar small i{
+    padding:5px;
 }
-small i{
-    padding-right:5px;
+
+.off-address{
+    display:inline-flex;
+    gap:15px;
 }
-.top-bar .top-bar-social a{
-    display:inline-block;
+/* right side area in top-bar */
+.top-bar .right-social i{
+  border:1px solid var(--light);
+  padding:8px;
+  border-radius:50%; 
 }
+.top-bar .right-social{
+    display:inline-flex;
+    gap:10px;
+}
+
 

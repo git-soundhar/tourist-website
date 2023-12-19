@@ -11,28 +11,32 @@
     </head>
     <body>
         <!-- whole website is inside the main tag -->
-        <main>
-            <!-- this is the header part including navigation bar and -->
-            <header>
-                <div class="container-fluid top-bar bg-dark px-5">
-                        <!-- address in  top nav-->
-                    <div class="addres bg-light">
-                      <small><i class="fa-solid fa-location-dot"></i>123,Tamil Nadu,India</small>
-                      <small><i class="fa-solid fa-phone"></i>+0123456789</small>
-                      <small><i class="fa-solid fa-envelope-open-text"></i>tourist@gmail.com</small>
+       <main>
+        <!-- this is the whole header and it holds top-bar and navigation bar -->
+          <header>
+               <div class="container-fluid bg-primary">
+                    <div class="row">
+                        <!-- this is the top bar -->
+                       <div class="column  top-bar">
+                        <!-- left side address in top bar -->
+                            <div class="off-address">
+                               <small><i class="fa-solid fa-location-dot"></i>123 street , TamilNadu , India</small>
+                               <small><i class="fa-solid fa-phone"></i>+0123456789</small>
+                               <small><i class="fa-solid fa-envelope-open"></i>tourist@gmail.com</small>
+                            </div> 
+                        <!-- right side social media in top bar -->   
+                            <div class="right-social">
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-linkedin-in"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                       </div>
                     </div>
-                        <!-- social media icons in  top nav-->
-                    <div class="top-bar-social">
-                       <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                       <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                       <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                       <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                       <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
-                           
-                </div>
-            </header>
-        </main>
+               </div>
+          </header>
+       </main> 
         <!-- bootstrap 5 JS link -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
