@@ -92,6 +92,8 @@ ul li a{
     position:relative;
     transition:ease-in-out 0.5s;
     display:inline-block;
+    text-decoration:none;
+    color:var(--light);
 }
 ul li a::before,
 ul li a::after{
@@ -112,7 +114,7 @@ ul li a:hover:after{
    transition:ease 0.5s;
 }
 /*this style for register buton in navigation bar */
-.nav-links ul li:last-child{
+.nav-links ul .last-child{
     background-color:var(--primary);
     padding:0 30px;
     border-radius:20px;
@@ -134,10 +136,31 @@ ul li a:hover:after{
     border-radius:10px;
     padding:5px 10px;
 }
+/* style for angle down arrow in dropdown menu */
+ul li .fa-angle-down{
+    padding-left:10px;
+}
+
 /* navigaion bar sicky at the top:0 */
 header nav{
     position:sticky;
     top:0;
 }
+/* dropdown menu design */
+nav ul li{
+    position:relative;
+}
+ul li .dropdown-menu{
+    display:flex;
+    flex-direction:column;
+    background-color:var(--light);
+    position:absolute;
+    top:55px;
+    left:-20px;
+    width:150px;
+}
 
+ul li .dropdown-menu a{
+    color:var(--dark);
+}
 
