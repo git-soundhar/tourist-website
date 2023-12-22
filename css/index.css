@@ -1,11 +1,10 @@
 /* nunito sans serief font family for whole website */
-@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nunito+Sans:opsz,wght@6..12,500&display=swap');*{
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    /* font family for whole website */
-    font-family: 'Gugi', sans-serif;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family:var(--font);
 }
 /* colors for our website */
 :root {
@@ -13,6 +12,7 @@
     --secondary: #FE8800;
     --light: #F5F5F5;
     --dark: #14141F;
+    --font:'Nunito', sans-serif;
 }
 /* styles for header section */
 /* top-bar styles */
@@ -54,7 +54,7 @@ header .top-bar{
     background-repeat:no-repeat;
     background-size:cover;
 }
-/* navoigation bar styles */
+/* navigation bar styles */
 nav{
     background-color:var(--light);
     display:flex;
@@ -66,11 +66,13 @@ nav{
     background-color:transparent;
     border-bottom:0.5px solid var(--light);
 }
-
+/* logo design */
 nav h1{
    color:var(--primary);
    font-size:40px;
+   cursor:pointer;
 }
+/* navigation links styles */
 .nav-links ul{
     list-style-type:none;
     display:flex;
@@ -80,14 +82,13 @@ nav h1{
 .nav-links ul li{
   display:inline-block;
   padding:5px 15px;
-  transition:all 0.5s; 
   text-transform:capitalize; 
   color:var(--light);
 }
-.nav-links ul li:hover a{
+.nav-links ul li a:hover{
     color:var(--primary);
 }
-/* this is anchor afer element*/
+/* this is anchor and anchor after element styles*/
 ul li a{
     position:relative;
     transition:ease-in-out 0.5s;
@@ -103,7 +104,6 @@ ul li a::after{
     height:0.5px;
     position:absolute;
 }
-
 ul li a::after{
     right:0;
     bottom:-2px;
@@ -123,10 +123,11 @@ ul li a:hover:after{
     align-items:center;
     color:var(--light);
 }
-.nav-links ul li:last-child:hover{
+.nav-links ul .last-child:hover{
     background-color:var(--light);
+}
+.nav-links ul .last-child:hover a{
     color:var(--primary);
-    font-weight:bold;
 }
 .nav-links ul li:last-child a::before,
 .nav-links ul li:last-child a::after{
@@ -138,7 +139,7 @@ ul li a:hover:after{
 }
 /* style for angle down arrow in dropdown menu */
 ul li .fa-angle-down{
-    padding-left:10px;
+    padding-left:0px;
 }
 
 /* navigaion bar sicky at the top:0 */
@@ -158,9 +159,75 @@ ul li .dropdown-menu{
     top:55px;
     left:-20px;
     width:150px;
+    display:none;
 }
 
 ul li .dropdown-menu a{
     color:var(--dark);
+}
+/* dropdown view during the hovering */
+ul .dropdown-li:hover .dropdown-menu{
+    display:block;
+}
+/* responsive navigation bar styles */
+nav .fa-bars,nav label{
+    display:none;
+    color:var(--light);
+}
+nav input{
+    display:none;
+}
+/* media query for responsive navigation bar */
+@media only screen and (max-width:1040px){
+    nav .fa-bars,nav label{
+        display:inline-block;
+    }
+    nav .fa-x{
+        display:none;
+    }
+    .nav-links{
+        position:fixed;
+        top:80px;
+        width:100%;
+        left:-100%;
+        transition:all 1s;
+    }
+    .nav-links ul{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:20px;
+    }
+    ul li .dropdown-menu{
+        left:100px;
+        top:5px;
+        z-index:99;
+        background-color:rgba(128, 128, 128,0.4); 
+    }
+    ul li .dropdown-menu li a{
+        color:var(--light);
+    }
+    ul li a{
+        font-size:18px;
+        letter-spacing: 2px;
+    }
+    header .top-bar{
+        display:none;
+    }
+    nav input:checked~.nav-links{
+            left:0;
+    }
+    nav input:checked ~label .fa-bars{
+        display:none;
+   }
+   nav input:checked ~label .fa-x{
+     display:inline-block;
+     font-weight:bold;
+     color:var(--light-color);
+     cursor:pointer;
+   }
+   ul li{
+    padding:10px 0;
+   }
 }
 
