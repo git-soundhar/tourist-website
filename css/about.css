@@ -1,0 +1,100 @@
+                    /* nunito sans serief font family for whole website */
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nunito+Sans:opsz,wght@6..12,500&display=swap');*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    /* font family for whole website */
+    font-family: 'Gugi', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+
+                    /* colors for our website */
+:root {
+    --primary: #86B817;
+    --secondary: #FE8800;
+    --light: #F5F5F5;
+    --dark: #14141F;
+}
+
+.about-container{
+    width:100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.about-image img{
+    width:650px;
+    height: 450px;
+}
+
+.about-des h3{
+    color: var(--primary);
+    padding-bottom: 10px;
+}
+
+.about-des h1{
+    color: var(--dark);
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.about-des span{
+    color: var(--primary);
+}
+
+.about-des p{
+    padding-bottom: 20px;
+}
+
+.about-packages{
+    display: grid;
+    grid-template-columns: auto auto;
+    line-height: 10px;
+    padding-bottom: 20px;
+}
+
+.about-packages i{
+    color: var(--primary);
+}
+
+.about-des button{
+    padding: 20px 40px;
+    font-size: 17px;
+    background-color: var(--primary);
+    color: var(--light);
+    border: none;
+
+}
+
+.travel-container{
+    text-align: center;
+}
+
+.travel-container h3:nth-child(1){
+    color: var(--primary);
+    padding-bottom: 5px;
+}
+
+.travel-container h1{
+    color: var(--dark);
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.travel-guide{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+}
+
+.travel-guide img{
+    width:300px;
+    height:320px;
+}
+
+
+
