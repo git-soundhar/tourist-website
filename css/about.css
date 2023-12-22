@@ -1,4 +1,4 @@
-/* nunito sans serief font family for whole website */
+                    /* nunito sans serief font family for whole website */
 @import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nunito+Sans:opsz,wght@6..12,500&display=swap');*{
     margin:0;
     padding:0;
@@ -9,7 +9,7 @@
 }
 
 
-/* colors for our website */
+                    /* colors for our website */
 :root {
     --primary: #86B817;
     --secondary: #FE8800;
