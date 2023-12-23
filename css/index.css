@@ -9,6 +9,10 @@
 }
 /* colors for our website */
 :root {
+    --primary: #86B817;
+    --secondary: #FE8800;
+    --light: #F5F5F5;
+    --dark: #14141F;
 }
 /* styles for header section */
 /* top-bar styles */
