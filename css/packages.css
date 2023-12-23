@@ -3,3 +3,98 @@
     padding: 0%;
     box-sizing: border-box;
 }
+:root {
+    --primary: #86B817;
+    --secondary: #FE8800;
+    --light: #F5F5F5;
+    --dark: #14141F;
+}
+.package-container {
+    width: 100%;
+    min-height: 100%;
+    font-family: cursive;
+}
+.pack-img {
+    width: 100%;
+    height: 90vh;
+    background-color: black;
+    background-image: url(..//images/bg-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.pack-img > h1 {
+    text-align: center;
+    color: white;
+    font-size: 60px;
+}
+/* <------------- awesome-container ------------------> */
+.awesom-container {
+    width: 100%;
+    height: 100vh;
+    padding: 40px 20px;
+}
+.topic-container {
+
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.topic-container .topic {
+    padding: 0px 10px;
+    color:var(--primary);
+    font-weight: bolder;
+}
+.topic-container .code {
+    background-color: silver;
+    border: 1px solid var(--primary);
+}
+.topic-container .left-side {
+    text-align: right;
+}
+.topic-container .left-side .top,.bottom {
+    float: right;
+}
+.topic-container .top {
+    width: 40px;
+    margin-bottom: 8px;
+}
+.topic-container .bottom {
+    width: 60px;
+}
+.awesom-container > h1 {
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--dark);
+    text-align: center;
+}
+/* <--------------- place=container ---------------> */
+.place-container {
+    font-family:'Courier New', Courier, monospace;
+}
+.place-container i {
+    color: var(--primary);
+}
+.place-container .imgage {
+    width: 300px;
+    height: 300px;
+}
+.place-container .imgage > img {
+    width: 100%;
+    height: 100%;
+}
+.place-container .discrption div > p {
+    display: inline;
+    
+}
+.place-container .discrption div {
+    display: flex;
+}
+
