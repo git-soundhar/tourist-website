@@ -2,4 +2,16 @@
     box-sizing:border-box;
     margin:0;
     padding:0;
+     /* font family for whole website */
+     font-family: 'Gugi', sans-serif;
+     font-family: 'Nunito Sans', sans-serif;
+}
+:root {
+    --primary: #86B817;
+    --secondary: #FE8800;
+    --light: #F5F5F5;
+    --dark: #14141F;
+}
+.form-container{
+    background-color:var(--primary);
 }
