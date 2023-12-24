@@ -6,6 +6,7 @@
      font-family: 'Gugi', sans-serif;
      font-family: 'Nunito Sans', sans-serif;
 }
+/* -------root--------------- */
 :root {
     --primary: #86B817;
     --secondary: #FE8800;
@@ -13,5 +14,18 @@
     --dark: #14141F;
 }
 .form-container{
-    background-color:var(--primary);
+    border:1px solid red;
+}
+h1,p{
+    padding-bottom:10px;
+}
+/* ----------label----------- */
+label{
+    display: block;
+    padding-bottom:5px;
+}
+/* ----------input------------------ */
+input[type=text]{
+    padding:7px;
+    outline:none;
 }
