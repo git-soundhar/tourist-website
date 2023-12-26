@@ -1,10 +1,15 @@
 /* nunito sans serief font family for whole website */
-@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+/* poopins fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:var(--font);
+    font-family:var(--content-font);
+}
+html{
+    scroll-behavior: smooth;
 }
 /* colors for our website */
 :root {
@@ -12,7 +17,12 @@
     --secondary: #FE8800;
     --light: #F5F5F5;
     --dark: #14141F;
-    --font:'Nunito', sans-serif;
+    --heading-font:'Nunito', sans-serif;
+    --content-font: 'Poppins', sans-serif;
+}
+/* font styles for heading tag */
+h1,h2,h3,h4,h5,h6{
+    font-family:var(--heading-font);
 }
 /* styles for header section */
 /* responsive font-size */
@@ -66,7 +76,8 @@ nav{
     height:80px;
     padding:0px 30px;
     background-color:transparent;
-    border-bottom:0.5px solid var(--light);
+    /* border-bottom:0.5px solid var(--light); */
+    z-index:9999999999999999999;
 }
 /* logo design */
 nav h1{
@@ -152,7 +163,7 @@ ul li .fa-angle-down{
 /* navigaion bar sicky at the top:0 */
 header nav{
     position:sticky;
-    top:0;
+    top: 0 !important;
 }
 /* dropdown menu design */
 nav ul li{
@@ -164,7 +175,7 @@ ul li .dropdown-menu{
     flex-direction:column;
     background-color:var(--light);
     position:absolute;
-    top:55px;
+    top:40px;
     left:-20px;
     width:150px;
     display:none;
@@ -223,7 +234,7 @@ nav input{
 .search-box input[type="search"]{
     width:100%;
     padding:18px 15px;
-    border-radius:20px;
+    border-radius:30px;
     border:none;
     outline-color:var(--primary);
     outline-offset: 2px;
@@ -235,7 +246,7 @@ nav input{
 /*styles button inside the search box */
 .search-box button{
     padding:10px 15px;
-    border-radius:20px;
+    border-radius:30px;
     border:none;
     position:absolute;
     right:10px;
@@ -251,6 +262,8 @@ nav input{
     }
     nav .fa-x{
         display:none;
+        font-weight:bold;
+        font-size:32px;
     }
     .nav-links{
         position:fixed;
@@ -287,6 +300,10 @@ nav input{
     nav input:checked~.nav-links{
             left:0;
     }
+    nav label .fa-bars{
+        font-size:32px;
+        font-weight:bold;
+    }
     nav input:checked ~label .fa-bars{
         display:none;
    }
@@ -303,4 +320,118 @@ nav input{
     height:calc(100vh - 80px);
    }
 }
-
+/* footer design starts */
+footer{
+    background-color:var(--dark);
+    padding-top:90px;
+    padding-right:100px;
+    padding-left:100px;
+    color:var(--light);
+}
+/*footer content containd 4 section(contact,company,gallery,newsletter)*/
+/* gallery section design */
+footer .gallery img{
+    height:70px;
+    width:70px;
+    border:3px solid var(--light);
+}
+/* footer>company section designs */
+.company p i{
+   padding-right:5px;
+}
+.company p:hover{
+   letter-spacing:2px;
+   transition:ease 1s;
+}
+footer h3{
+    padding-bottom:15px;
+}
+.company p,.contact p,.newsletter p{
+    padding:5px;
+}
+/* footer content >contact section designs */
+.contact .contact-icons i{
+   border:1px solid var(--light);
+   border-radius:50%;
+   padding:8px;
+}
+.contact .contact-icons{
+    padding-top:15px;
+}
+.contact i{
+    padding-right:8px;
+}
+.contact-icons i:hover{
+    background-color:var(--light);
+    color:var(--primary);
+    transition:ease 1s;
+}
+/* footer content > news letter section designs */
+footer .newsletter .footer-search{
+    width:100%;
+    background-color:var(--dark);
+    position:relative;
+    margin-top:30px;
+}
+.footer-search button{
+    position:absolute;
+    right:8px;
+    padding:10px;
+    top:13px;
+    background-color:var(--primary);
+    color:var(--light);
+    border:0;   
+}
+.footer-search input{
+    width:100%;
+    padding:20px;
+    border-color:var(--primary);
+    outline-color: var(--primary);
+    outline-offset:1px;
+    padding-right:200px;
+}
+footer .copyright{
+    display:flex;
+    justify-content:space-between;
+    padding:30px 0;
+}
+.copyright span{
+    border-right:1px solid var(--light);
+    padding:0 10px;
+    display:inline-block;
+   
+}
+.copyright .bord-unset{
+    border:unset;
+}
+/* responsive code for footer */
+.footer-content{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+/* copy right section responsive code */
+@media only screen and (max-width:1062px){
+    .copyright{
+        flex-direction:column;
+        gap:10px;
+        align-items:center;
+    }
+}
+/* to top button designs */
+.to-top{
+    height:50px;
+    width:50px;
+    background-color:var(--light);
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.to-top:hover{
+    background-color:var(--primary);
+    transition:ease 1s;
+    color: var(--light) !important;
+}
