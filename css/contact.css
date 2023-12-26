@@ -1,9 +1,13 @@
+/* nunito sans serief font family for whole website */
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
+
 /*                                over all web main container style          */
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
 }
 
 /*                                middle desing box details container style */
@@ -24,7 +28,7 @@
     font-size: 40px;
 }
 .inner-top-box h4{
-    color:#65B741;
+    color:#6fc210;
     font-size: 25px;
 }
 
@@ -41,7 +45,7 @@
 /*                                      first form box destails styles  */
 
 .first-form-box{
-    width: 350px;
+    width: 370px;
     min-height: 350px;
     padding: 8px;
 }
@@ -55,7 +59,7 @@
    color: gray;
 }
 .form-details{
-    margin: 10px 0;
+    margin: 25px 0;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -65,7 +69,7 @@
     height: 50px;
     width: 50px;
     margin-top: 10px;
-    background-color: #65B741;
+    background-color: #61aa0d;
     border: none;
 }
 .form-details button i{
@@ -75,7 +79,7 @@
 .form-move h4{
     font-size: 20px;
     padding-bottom: 7px;
-    color:#65B741;
+    color:#61aa0d;
 }
 .form-move p{
     color: gray;
@@ -84,14 +88,14 @@
 /*                                      second map form box destails styles  */
 
 .second-map-box{
-    width: 300px;
+    width: 370px;
     height: 350px;
 }
 
 /*                                      Third contact form box destails styles  */
 
 .third-form-box{
-    width: 350px;
+    width: 370px;
     height: 350px;
     padding: 10px;
 }
@@ -106,6 +110,11 @@
 .third-form-box button{
     width: 100%;
     padding: 20px;
+    background-color: #61aa0d;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
 }
 .first-in{
     width: 47%;
