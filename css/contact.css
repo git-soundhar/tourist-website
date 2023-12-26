@@ -1,16 +1,21 @@
+/*                                over all web main container style          */
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+/*                                middle desing box details container style */
+
+/*                                 Top message box container */
+
 .inner-top-box{
     text-align: center;
-    /* background-color: aqua; */
     width: 100%;
     height: 200px;
     display: flex;
     flex-direction: column;
-    /* align-items: end; */
     justify-content: center;
     gap: 10px;
 }
@@ -19,11 +24,12 @@
     font-size: 40px;
 }
 .inner-top-box h4{
-    color: springgreen;
+    color:#65B741;
     font-size: 25px;
 }
+
+/*                                           Buttom message box container */
 .inner-bottom-box{
-    background-color: aquamarine;
     width: 100%;
     height: 450px;
     display: flex;
@@ -31,10 +37,12 @@
     align-items: center;
     gap: 30px;
 }
+ 
+/*                                      first form box destails styles  */
+
 .first-form-box{
     width: 350px;
     min-height: 350px;
-    background-color: brown;
     padding: 8px;
 }
 .first-form-box >h3{
@@ -52,14 +60,12 @@
     align-items: center;
     justify-content: start;
     gap: 15px;
-    /* background-color: red; */
 }
 .form-details button{
-    /* padding: 10px; */
     height: 50px;
     width: 50px;
     margin-top: 10px;
-    background-color: springgreen;
+    background-color: #65B741;
     border: none;
 }
 .form-details button i{
@@ -69,14 +75,46 @@
 .form-move h4{
     font-size: 20px;
     padding-bottom: 7px;
-    color:springgreen;
+    color:#65B741;
 }
 .form-move p{
     color: gray;
 }
 
+/*                                      second map form box destails styles  */
+
 .second-map-box{
     width: 300px;
     height: 350px;
-    /* background-color: red; */
 }
+
+/*                                      Third contact form box destails styles  */
+
+.third-form-box{
+    width: 350px;
+    height: 350px;
+    padding: 10px;
+}
+.third-form-box input{
+    padding: 20px;
+    margin-bottom: 18px;
+}
+.third-form-box textarea{
+    margin-bottom: 18px;
+    padding: 20px;
+}
+.third-form-box button{
+    width: 100%;
+    padding: 20px;
+}
+.first-in{
+    width: 47%;
+}
+.last-in{
+    width: 100%;
+}
+.space-in{
+    margin-right: 15px;
+}
+
+/*                       Ressponsiv design styles  */
