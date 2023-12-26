@@ -1,5 +1,129 @@
+/* nunito sans serief font family for whole website */
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
+
+/*                                over all web main container style          */
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
 }
+
+/*                                middle desing box details container style */
+
+/*                                 Top message box container */
+
+.inner-top-box{
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.inner-top-box h1{
+    color: rgb(25, 25, 71);
+    font-size: 40px;
+}
+.inner-top-box h4{
+    color:#6fc210;
+    font-size: 25px;
+}
+
+/*                                           Buttom message box container */
+.inner-bottom-box{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+ 
+/*                                      first form box destails styles  */
+
+.first-form-box{
+    width: 370px;
+    min-height: 350px;
+    padding: 8px;
+}
+.first-form-box >h3{
+    font-size: 22px;
+    padding: 10px 0;
+    color: rgb(23, 23, 70)     ;
+    
+}
+.first-form-box p{
+   color: gray;
+}
+.form-details{
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+}
+.form-details button{
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+    background-color: #61aa0d;
+    border: none;
+}
+.form-details button i{
+    font-size: 20px;
+    color: white;
+}
+.form-move h4{
+    font-size: 20px;
+    padding-bottom: 7px;
+    color:#61aa0d;
+}
+.form-move p{
+    color: gray;
+}
+
+/*                                      second map form box destails styles  */
+
+.second-map-box{
+    width: 370px;
+    height: 350px;
+}
+
+/*                                      Third contact form box destails styles  */
+
+.third-form-box{
+    width: 370px;
+    height: 350px;
+    padding: 10px;
+}
+.third-form-box input{
+    padding: 20px;
+    margin-bottom: 18px;
+}
+.third-form-box textarea{
+    margin-bottom: 18px;
+    padding: 20px;
+}
+.third-form-box button{
+    width: 100%;
+    padding: 20px;
+    background-color: #61aa0d;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+.first-in{
+    width: 47%;
+}
+.last-in{
+    width: 100%;
+}
+.space-in{
+    margin-right: 15px;
+}
+
+/*                       Ressponsiv design styles  */
