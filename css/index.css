@@ -1,4 +1,4 @@
-/* nunito sans serief font family for whole website */
+/* nunito sans serief font family only for heading tag in website website */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
 /* poopins fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -76,8 +76,7 @@ nav{
     height:80px;
     padding:0px 30px;
     background-color:transparent;
-    /* border-bottom:0.5px solid var(--light); */
-    z-index:9999999999999999999;
+    z-index:9999;
 }
 /* logo design */
 nav h1{
@@ -198,7 +197,6 @@ nav input{
 }
 /* banner text styles */
 .banner .bannertext-container{
-    /* background-color:var(--secondary); */
     width:100%;
     height:calc(100vh - 80px);
     display:flex;
@@ -256,9 +254,10 @@ nav input{
     font-size: 18px;
 }
 /* media query for responsive navigation bar */
-@media only screen and (max-width:1040px){
+@media only screen and (max-width:1033px){
     nav .fa-bars,nav label{
         display:inline-block;
+       
     }
     nav .fa-x{
         display:none;
@@ -321,18 +320,27 @@ nav input{
    }
 }
 /* footer design starts */
+html{
+    font-size:16px;
+}
 footer{
     background-color:var(--dark);
-    padding-top:90px;
-    padding-right:100px;
-    padding-left:100px;
+    padding-top:5rem;
+    padding-right:7rem;
+    padding-left:7rem;
     color:var(--light);
 }
+.footer-content{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    padding-bottom:50px;
+}
+
 /*footer content containd 4 section(contact,company,gallery,newsletter)*/
 /* gallery section design */
 footer .gallery img{
-    height:70px;
-    width:70px;
+    height:30%;
+    width:30%;
     border:3px solid var(--light);
 }
 /* footer>company section designs */
@@ -368,10 +376,10 @@ footer h3{
 }
 /* footer content > news letter section designs */
 footer .newsletter .footer-search{
-    width:100%;
+    /* width:100%; */
     background-color:var(--dark);
     position:relative;
-    margin-top:30px;
+    background-color:#FE8800;
 }
 .footer-search button{
     position:absolute;
@@ -390,6 +398,7 @@ footer .newsletter .footer-search{
     outline-offset:1px;
     padding-right:200px;
 }
+/* footer copy right section designs */
 footer .copyright{
     display:flex;
     justify-content:space-between;
@@ -405,11 +414,12 @@ footer .copyright{
     border:unset;
 }
 /* responsive code for footer */
-.footer-content{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
+@media only screen and (max-width:768px){
+    footer{
+        background-color:green;/*sir isn't working*/
+    }
 }
+
 /* copy right section responsive code */
 @media only screen and (max-width:1062px){
     .copyright{
@@ -420,8 +430,8 @@ footer .copyright{
 }
 /* to top button designs */
 .to-top{
-    height:50px;
-    width:50px;
+    height:8%;
+    width:4.5%;
     background-color:var(--light);
     position:fixed;
     right:10px;
