@@ -320,3 +320,25 @@ nav input{
     height:calc(100vh - 80px);
    }
 }
+/* -------------register-css-------------- */
+/* ----------------over-all------------------ */
+main .over-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--primary);
+
+}
+/* ----------------form-image------------------ */
+.form-image{
+  height:700px;
+  width:55%;
+  
+}
+.form-image img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    filter: brightness(50%);
+    
+}
