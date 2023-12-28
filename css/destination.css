@@ -18,11 +18,12 @@
 
 .img-collections{
 	width: 100%;
-	min-height: 80vh;
+	height: 80vh;
 	display: flex;
 	gap: 10px;
-	padding: 5px 70px;
+	padding: 0px 70px;
 	box-sizing: border-box;
+	border: 2px solid black;
 }
 .img-collections1{
 	width: 60%;
@@ -33,10 +34,15 @@
 	width: 40%;
 	height: 100%;
 }
+.sub-img{
+	height: 50%;
+}
 .sub-img1{
 	display: flex;
+	height: 50%;
 	gap: 10px;
-	margin-top: 5px;
+    padding-top: 10px;
+    box-sizing: border-box;
 }
 
 .img{
@@ -44,7 +50,7 @@
 }
 
 .img1,.img2,.img3{
-	height: 50%;
+	height: 100%;
 	box-sizing: border-box;
 }
 .img2,.img3{
@@ -87,13 +93,12 @@
 		flex-direction: column;
 		gap: 10px;
 		padding: 5px 15px;
-
 	}
 	.img-collections1,.img-collections2{
 		width: 100%;
 	}
 	.img{
-		height: 150px;
+		height: 250px;
 	}
 
 }
@@ -106,8 +111,8 @@
 		width: 100%;
 	}
 	
-	.img4{
-		height: 100%;
+	.img-collections2{
+		min-height: 100%;
 	}
 
 }
