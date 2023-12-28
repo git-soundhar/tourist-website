@@ -1,10 +1,12 @@
-/* nunito sans serief font family for whole website */
-@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
+/* nunito sans serief font family only for heading tag in website website */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+/* poopins fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:var(--font);
+    font-family:var(--content-font);
 }
 /* colors for our website */
 :root {
@@ -13,7 +15,15 @@
     --light: #F5F5F5;
     --dark: #14141F;
     --warning: #FE8800;
-    --font:'Nunito', sans-serif;
+    --heading-font:'Nunito', sans-serif;
+    --content-font: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* font styles for heading tag */
+h1,h2,h3,h4,h5,h6{
+    font-family:var(--heading-font);
 }
 /* <--------- overall tourist poackage style--------> */
 /* <------------- banner style start-----------> */
@@ -31,13 +41,13 @@
 .banner > h1 {
     text-align: center;
     color: var(--light);
-    font-size: 8cqmax;
+    font-size: 6cqmax;
 } 
 /* <------------- awesome-container ------------------> */
 .awesom-container {
     width: 100%;
     min-height: 100%;
-    padding: 50px 10px;
+    padding: 50px;
 }
 .topic-container {
 
@@ -74,14 +84,14 @@
 /* <--------- topic container end ------> */
 
 .awesom-container > h1 {
-    font-size: 8cqmin;
+    font-size: 7cqmin;
     padding-bottom: 18px;
     color: rgb(67, 21, 94);
     text-align: center;
 }
 /* <---awesome-container in place-container ---> */
 .place-container {
-    padding: 10px 0px;
+    padding: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
@@ -112,10 +122,16 @@
 }
 /* <--- place-container in discrption ------> */
 /* <----- .place-container discrption in place -----> */
+.place-container .discrption > div  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .place-container .discrption div > p {
     display: inline-block;
     text-align: center;
-    padding: 10px 20px;
+    font-size: 16px;
+    padding: 12px 18px;
     color: var(--secondary);
 }
 .place-container .discrption div > p:hover {
@@ -140,12 +156,12 @@
 .place-container .discrption figcaption h1 {
     margin-top: 16px;
     padding: 5px 0px;
-    font-size: 30px;
+    font-size: 24px;
 }
 .place-container .discrption figcaption p {
     color: var(--secondary);
-    font-size: 16px;
     padding: 0px 8px;
+    font-size: 16px;
     line-height:22px;
 }
 /* <------- star icon-container start-----> */
@@ -155,7 +171,7 @@
 /* <----- star icon-container end -----> */
 /* <----- read more and book now container start ------> */
 .place-container .discrption figcaption div {
-    margin: 8px 0px;
+    margin: 20px 0px 10px 0px;
     display: inline-flex;
     gap: 2px;
     border: none;
@@ -201,10 +217,175 @@
     }
 }
 /* <--------- .awesom-container end -------> */
+/* <--- online booking container start ------>*/
+.booking-container {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.booking-container header {
+    width: 90%;
+    min-height: 85%;
+    background:linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)),url('../images/booking.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: var(--light);
+}
+/* <------- online booking ------> */
+.booking-container header > article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+}
+.booking-container header h1 {
+    font-size: 6cqmin;
+} 
+.booking-container header > article p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+.booking-container header > article button {
+    width: 200px;
+    height: 42px;
+    background: none;
+    cursor: pointer;
+    color: var(--light);
+    border-radius: 6px;
+    border: 1px solid var(--light);
+}
+.booking-container header > article button:focus {
+    background-color: var(--light);
+    color: var(--dark);
+}
+/* <------ online booking register ------> */
+.booking-container form {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+.booking-container form article div {
+    height: 60px;
+    padding: 30px 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.booking-container form label {
+    display: block;
+    margin-bottom: 20px;
+    position: absolute;
+    font-size: 14px;
+    transition: all 0.30s ease;
+}
+.booking-container form aside {
+    width: 100%;
+    height: 2px;
+    background-color: var(--light);
+}
+.booking-container form input,select,textarea {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--light);
+    border: 1px solid var(--light);
+    border-radius: 6px;
+}
+.booking-container form select {
+    height: 50px;
+    padding: 4px 10px;
+}
+.booking-container form input {
+    height: 50px;
+    padding: 4px 10px;
+}
+.booking-container form option {
+    color: var(--dark);
+}
+.booking-container form article {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 10px;
+}
+.booking-container form figure {
+    width: 98%;
+    padding: 4px 10px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.booking-container form figure label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.booking-container form figure textarea {
+    margin: 0%;
+    padding: 20px 20px 10px 20px;
+    border: 1px solid var(--light);
+    transition: all 0.3s ease;
+}
+
+.booking-container form .date-des {
+    margin-top: 10px;
+}
+.booking-container form div > label {
+    top: 42px;
+    left: 20px;
+    font-size: 14px;
+}
+.booking-container form input:focus ~ label, input:valid ~ label, select:focus ~ label,select:valid ~ label {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 0px 8px;
+    border-radius: 20px;
+    pointer-events: all;
+    transform: translateY(-22px);
+    left: 30px;
+}
+.booking-container form figure textarea:valid ~ label,textarea:focus ~ label {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 0px 8px;
+    border-radius: 20px;
+    transform: translateY(-28px);
+}
+.booking-container form button {
+    width: 60%;
+    cursor: pointer;
+    height: 44px;
+    margin: auto;
+    background: none;
+    color: var(--light);
+    border: 1px solid var(--light);
+    border-radius: 6px
+}
+.booking-container form button:hover,button:focus {
+    background-color: #F5F5F5;
+    color: var(--dark);
+}
+@media screen and (min-width:500px) and (max-width:800px) {
+    .booking-container header {
+        grid-template-columns: 50%;
+    }
+}
+/* <--- online booking container end ------>*/
+
 /* <-------- Process container start ------> */
 .process-container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 .process-container > h1 {
     font-size: 8cqmin;
@@ -214,17 +395,19 @@
 }
 /* <------process container in easy steps-------> */
 .process-container {
-    padding: 10px;
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 70px;
 }
 /* <----- 2 line this container style start -----> */
 .process-container .easy-steps {
     padding-top: 80px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 50px;
+    gap: 30px;
 }
 .process-container .easy-steps div {
-    min-height: 230px;
+    min-height: 250px;
     padding: 30px 20px;
     text-align: center;
     display: flex;
@@ -243,6 +426,7 @@
 }
 .process-container .easy-steps div aside > p {
     line-height: 20px;
+    font-size: 16px;
     color: var(--secondary);
 }
 .process-container .easy-steps figure {
@@ -269,7 +453,7 @@
     color: var(--light);
     background-color: var(--primary);
     font-size: 50px;
-    padding: 26px;
+    padding: 28px;
     border-radius: 50%;
     position: absolute;
     top: -54px;
@@ -280,6 +464,83 @@
     .process-container .easy-steps {
         gap: 70px;
     }
-        
+    .awesom-container {
+        padding: 40px 10px;
+    }
+    .place-container {
+        padding: 0%;
+    }
+    .booking-container header {
+        width: 95%;
+        display: grid;
+        grid-template-columns: 100%;
+        padding: 20px;
+        gap: 30px;
+    }
+    .booking-container header > article {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0%;
+    }
+    .booking-container form {
+        padding: 0%;
+    }
+    .process-container {
+        padding: 40px 10px;
+    }    
+}
+@media screen and (min-width:500px) and (max-width:1200px) {
+    .place-container {
+        padding: 10px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .place-container header {
+        width: 350px;
+        /* flex-grow: 0.5; */
+    }
+    .process-container .easy-steps {
+        padding-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 80px;
+    }
+    .process-container .easy-steps div {
+        width: 300px;
+        min-height: 230px;
+        padding: 30px 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        border: 1px solid var(--primary);
+        position: relative;
+    }
+    .place-container .discrption div > p {
+        display: inline-block;
+        text-align: center;
+        font-size: 16px;
+        padding: 12px 10px;
+        color: var(--secondary);
+    }
+    .process-container .easy-steps div {
+        height: 280px;
+    }
+
 }
 /* <-------- .process-container end ----------> */
+@media screen and (min-width:300px) and (max-width:500px) {
+    .booking-container form article {
+        grid-template-columns: 100%;
+    }
+    .process-container .easy-steps div {
+        height: 280px;
+    }
+}
