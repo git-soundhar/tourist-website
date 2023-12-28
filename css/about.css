@@ -478,25 +478,24 @@ footer .copyright{
     padding: 80px 50px;
 }
 
-.topic {
+.topic{
     display: flex;
-}
-
-.topic .line{
-    border: 1px solid var(--primary);
-    margin-top: 7px;
-    margin-left: 10px;
-}
-
-.topic .top{
-    width:40px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .topic .bottom{
-    width:60px
+    width: 60px;
+    border: 1px solid var(--primary);
+    margin-top: 8px;
 }
 
-
+.topic .top{
+    width: 40px;
+    border: 1px solid var(--primary);
+    /* margin-bottom: 6px; */
+}
 
 .about-image{
     width:50%
@@ -511,10 +510,14 @@ footer .copyright{
     width: 50%;
 }
 
+.about-des .topic{
+    display: flex;
+    justify-content: start;
+}
+
 
 .about-des h3{
     color: var(--primary);
-    padding-bottom: 10px;
 }
 
 .about-des h1{
@@ -556,7 +559,7 @@ footer .copyright{
     padding-bottom: 80px;
 }
 
-.travel-container h3:nth-child(1){
+.travel-container h3:nth-child(2){
     color: var(--primary);
     padding-bottom: 5px;
 }
