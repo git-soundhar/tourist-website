@@ -1,5 +1,285 @@
-* {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+/* nunito sans serief font family for whole website */
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:var(--font);
 }
+/* colors for our website */
+:root {
+    --primary: #86B817;
+    --secondary: #808080;
+    --light: #F5F5F5;
+    --dark: #14141F;
+    --warning: #FE8800;
+    --font:'Nunito', sans-serif;
+}
+/* <--------- overall tourist poackage style--------> */
+/* <------------- banner style start-----------> */
+.banner{
+    height:100vh;
+    width:100%;
+    background:linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)),url('../images/bg-hero.jpg');
+    background-position:center;
+    background-repeat:no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* <---------- banner style for media querry ----------> */
+.banner > h1 {
+    text-align: center;
+    color: var(--light);
+    font-size: 8cqmax;
+} 
+/* <------------- awesome-container ------------------> */
+.awesom-container {
+    width: 100%;
+    min-height: 100%;
+    padding: 50px 10px;
+}
+.topic-container {
+
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+/* <---- topic container start--------> */
+.topic-container .topic {
+    padding: 0px 10px;
+    color:var(--primary);
+    font-weight: bolder;
+}
+.topic-container .code {
+    background-color: silver;
+    border: 1px solid var(--primary);
+}
+.topic-container .left-side {
+    text-align: right;
+}
+.topic-container .left-side .top,.bottom {
+    float: right;
+}
+.topic-container .top {
+    width: 40px;
+    margin-bottom: 8px;
+}
+.topic-container .bottom {
+    width: 60px;
+}
+/* <--------- topic container end ------> */
+
+.awesom-container > h1 {
+    font-size: 8cqmin;
+    padding-bottom: 18px;
+    color: rgb(67, 21, 94);
+    text-align: center;
+}
+/* <---awesome-container in place-container ---> */
+.place-container {
+    padding: 10px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.place-container header {
+    box-shadow: 0px 0px 8px var(--dark);
+    justify-content: center;
+    align-items: center;
+}
+.place-container i {
+    color: var(--primary);
+}
+/* <----- place-container in image --------> */
+.place-container .imgage {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+
+}
+.place-container .imgage > img {
+    width: 100%;
+    height: 100%;
+    transition: all 3s;
+}
+.place-container .imgage > img:hover {
+    cursor: zoom-in;
+    transform: scale(1.2);
+}
+/* <--- place-container in discrption ------> */
+/* <----- .place-container discrption in place -----> */
+.place-container .discrption div > p {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    color: var(--secondary);
+}
+.place-container .discrption div > p:hover {
+    color: var(--primary);
+}
+.place-container .discrption div > p:nth-child(2) {
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+}
+.place-container .discrption div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid silver;
+}
+/* <----- .place-container discrption in details -----> */
+.place-container .discrption figcaption {
+    text-align: center;
+    padding: 10px;
+    padding-bottom:20px ;
+}
+.place-container .discrption figcaption h1 {
+    margin-top: 16px;
+    padding: 5px 0px;
+    font-size: 30px;
+}
+.place-container .discrption figcaption p {
+    color: var(--secondary);
+    font-size: 16px;
+    padding: 0px 8px;
+    line-height:22px;
+}
+/* <------- star icon-container start-----> */
+.place-container .discrption figcaption aside {
+    margin-bottom: 10px;
+}
+/* <----- star icon-container end -----> */
+/* <----- read more and book now container start ------> */
+.place-container .discrption figcaption div {
+    margin: 8px 0px;
+    display: inline-flex;
+    gap: 2px;
+    border: none;
+    border: 1px solid #acce62;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.place-container figcaption div > button {
+    color: var(--light);
+    background-color: var(--primary);
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+.place-container figcaption div > button:hover {
+    background-color:#acce62;
+}
+.place-container figcaption div > .read {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding-left: 24px;
+}
+.place-container figcaption div > .book {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    padding-right: 24px;
+}
+.place-container figcaption div > .read:hover {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+
+}
+.place-container figcaption div > .book:hover {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+
+}
+@media screen and (min-width:1000px) and (max-width:4000px) {
+    .place-container{
+        padding: 10px 20px;
+    }
+}
+/* <--------- .awesom-container end -------> */
+/* <-------- Process container start ------> */
+.process-container {
+    width: 100%;
+    height: 100vh;
+}
+.process-container > h1 {
+    font-size: 8cqmin;
+    padding-bottom: 18px;
+    color: rgb(67, 21, 94);
+    text-align: center;
+}
+/* <------process container in easy steps-------> */
+.process-container {
+    padding: 10px;
+}
+/* <----- 2 line this container style start -----> */
+.process-container .easy-steps {
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+.process-container .easy-steps div {
+    min-height: 230px;
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border: 1px solid var(--primary);
+    position: relative;
+}
+.process-container .easy-steps div aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+.process-container .easy-steps div aside > p {
+    line-height: 20px;
+    color: var(--secondary);
+}
+.process-container .easy-steps figure {
+    width: 240px;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    
+}
+.process-container .easy-steps figure hr {
+    display: inline-block;
+    height: 3px;
+    margin: 0%;
+    background-color: var(--primary);
+}
+.process-container .easy-steps figure > .line1 {
+    width: 130px;
+}
+.process-container .easy-steps figure > .line2 {
+    width: 230px;
+}
+.process-container .easy-steps i {
+    color: var(--light);
+    background-color: var(--primary);
+    font-size: 50px;
+    padding: 26px;
+    border-radius: 50%;
+    position: absolute;
+    top: -54px;
+    box-shadow: 0px 6px 8px 2px var(--secondary);
+}
+/* <----- 2 line this container style end -----> */
+@media screen and (min-width:300px) and (max-width:900px) {
+    .process-container .easy-steps {
+        gap: 70px;
+    }
+        
+}
+/* <-------- .process-container end ----------> */
