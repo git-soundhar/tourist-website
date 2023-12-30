@@ -167,20 +167,22 @@
     .first-form-box{
         width: auto;
         margin-top: 30px;
-        margin: 0px 50px;
+        margin-left:50px;
+        margin-right: 50px;
 
     }
     .second-map-box{
         width: auto;
-        margin-top: 30px;
-        margin: 0px 50px;
-        
+        margin-top: 50px;
+        margin-left:50px;
+        margin-right: 50px; 
     }
     .third-form-box{
         margin-top: 30px;
         width: auto;
-        margin: 0px 50px;
-    }
+        margin-left:50px;
+        margin-right: 50px;}
+
     .first-in{
         width: 100%;
     }
