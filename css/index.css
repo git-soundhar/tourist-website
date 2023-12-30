@@ -1,10 +1,15 @@
-/* nunito sans serief font family for whole website */
-@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
+/* nunito sans serief font family only for heading tag in website website */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+/* poopins fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:var(--font);
+    font-family:var(--content-font);
+}
+html{
+    scroll-behavior: smooth;
 }
 /* colors for our website */
 :root {
@@ -12,7 +17,13 @@
     --secondary: #FE8800;
     --light: #F5F5F5;
     --dark: #14141F;
-    --font:'Nunito', sans-serif;
+    --heading-font:'Nunito', sans-serif;
+    --content-font: 'Poppins', sans-serif;
+    --para:#808080;
+}
+/* font styles for heading tag */
+h1,h2,h3,h4,h5,h6{
+    font-family:var(--heading-font);
 }
 /* styles for header section */
 /* responsive font-size */
@@ -66,7 +77,7 @@ nav{
     height:80px;
     padding:0px 30px;
     background-color:transparent;
-    border-bottom:0.5px solid var(--light);
+    z-index:9999;
 }
 /* logo design */
 nav h1{
@@ -152,7 +163,7 @@ ul li .fa-angle-down{
 /* navigaion bar sicky at the top:0 */
 header nav{
     position:sticky;
-    top:0;
+    top: 0;
 }
 /* dropdown menu design */
 nav ul li{
@@ -164,7 +175,7 @@ ul li .dropdown-menu{
     flex-direction:column;
     background-color:var(--light);
     position:absolute;
-    top:55px;
+    top:40px;
     left:-20px;
     width:150px;
     display:none;
@@ -187,7 +198,6 @@ nav input{
 }
 /* banner text styles */
 .banner .bannertext-container{
-    /* background-color:var(--secondary); */
     width:100%;
     height:calc(100vh - 80px);
     display:flex;
@@ -223,7 +233,7 @@ nav input{
 .search-box input[type="search"]{
     width:100%;
     padding:18px 15px;
-    border-radius:20px;
+    border-radius:30px;
     border:none;
     outline-color:var(--primary);
     outline-offset: 2px;
@@ -235,7 +245,7 @@ nav input{
 /*styles button inside the search box */
 .search-box button{
     padding:10px 15px;
-    border-radius:20px;
+    border-radius:30px;
     border:none;
     position:absolute;
     right:10px;
@@ -245,12 +255,15 @@ nav input{
     font-size: 18px;
 }
 /* media query for responsive navigation bar */
-@media only screen and (max-width:1040px){
+@media only screen and (max-width:1033px){
     nav .fa-bars,nav label{
         display:inline-block;
+       
     }
     nav .fa-x{
         display:none;
+        font-weight:bold;
+        font-size:32px;
     }
     .nav-links{
         position:fixed;
@@ -287,6 +300,10 @@ nav input{
     nav input:checked~.nav-links{
             left:0;
     }
+    nav label .fa-bars{
+        font-size:32px;
+        font-weight:bold;
+    }
     nav input:checked ~label .fa-bars{
         display:none;
    }
@@ -303,4 +320,466 @@ nav input{
     height:calc(100vh - 80px);
    }
 }
+/* footer design starts */
+html{
+    font-size:16px;
+}
+footer{
+    background-color:var(--dark);
+    padding-top:5rem;
+    padding-right:7rem;
+    padding-left:7rem;
+    color:var(--light);
+}
+.footer-content{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    padding-bottom:50px;
+    text-align:left;
+}
 
+/*footer content containd 4 section(contact,company,gallery,newsletter)*/
+/* gallery section design */
+footer .gallery img{
+    height:30%;
+    width:30%;
+    border:3px solid var(--light);
+}
+/* footer>company section designs */
+.company p i{
+   padding-right:5px;
+}
+.company p:hover{
+   letter-spacing:2px;
+   transition:ease 1s;
+}
+footer h3{
+    padding-bottom:15px;
+}
+.company p,.contact p,.newsletter p{
+    padding:5px;
+}
+/* footer content >contact section designs */
+.contact .contact-icons i{
+   border:1px solid var(--light);
+   border-radius:50%;
+   padding:8px;
+}
+.contact .contact-icons{
+    padding-top:15px;
+}
+.contact i{
+    padding-right:8px;
+}
+.contact-icons i:hover{
+    background-color:var(--light);
+    color:var(--primary);
+    transition:ease 1s;
+}
+/* footer content > news letter section designs */
+footer .newsletter .footer-search{
+    /* width:100%; */
+    background-color:var(--dark);
+    position:relative;
+    background-color:#FE8800;
+}
+.footer-search button{
+    position:absolute;
+    right:8px;
+    padding:10px;
+    top:13px;
+    background-color:var(--primary);
+    color:var(--light);
+    border:0;   
+}
+.footer-search input{
+    width:100%;
+    padding:20px;
+    border-color:var(--primary);
+    outline-color: var(--primary);
+    outline-offset:1px;
+    padding-right:200px;
+}
+/* footer copy right section designs */
+footer .copyright{
+    display:flex;
+    justify-content:space-between;
+    padding:30px 0;
+}
+.copyright span{
+    border-right:1px solid var(--light);
+    padding:0 10px;
+    display:inline-block;
+   
+}
+.copyright .bord-unset{
+    border:unset;
+}
+/* responsive code for footer */
+@media only screen and (max-width:768px){
+    footer{
+        padding-right:4rem;
+        padding-left:4rem;
+    }
+    .footer-content{
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        row-gap:20px;
+        column-gap:20px;
+        text-align:left;
+    }
+}
+@media only screen and (max-width:325px){
+    footer{
+        padding-right:2rem;
+        padding-left:2rem;
+    }
+    .footer-content{
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        row-gap:20px;
+        column-gap:20px;
+        text-align:left;
+    }
+}
+
+/* copy right section responsive code */
+@media only screen and (max-width:1062px){
+    .copyright{
+        flex-direction:column;
+        gap:10px;
+        align-items:center;
+    }
+}
+/* to top button designs */
+.to-top{
+    background-color:var(--secondary);
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+}
+.to-top:hover{
+    background-color:var(--primary);
+    transition:ease 1s;
+    color: var(--light) !important;
+}
+
+/* about paage css code */
+/* about us page styles starts here */
+.about-container{
+    width:100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 90px;
+    /* background-color:yellow; */
+}
+/* topic contains (about us heading) and rightside double line,left side double line */
+.topic{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+/* desig line with topic */
+.topic .right-side .bottom{
+    width: 70px;
+    height:3px;
+    margin-top: 8px;
+    border-top-right-radius: 10px;
+    background-color:var(--primary);
+}
+
+.topic .right-side .top{
+    width: 40px;
+    border-bottom-right-radius: 10px;
+    height:3px;
+    background-color:var(--primary);
+}
+.topic .left-side .bottom{
+    width:70px;
+    height:3px;
+    margin-top: 8px;
+    border-top-right-radius: 10px;
+    background-color:var(--primary);
+}
+
+.topic .left-side .top{
+    width: 40px;
+    margin-left:30px;
+    border-bottom-right-radius: 10px;
+    height:3px;
+    background-color:var(--primary);
+}
+
+.about-image{
+    width:50%
+}
+
+.about-image img{
+    width:100%;
+    height:460px;
+
+}
+
+.about-des{
+    width: 50%;
+    /* background-color:#b81785; */
+}
+
+.about-des .topic{
+    display: flex;
+    justify-content: start;
+}
+
+
+.about-des h3{
+    color: var(--primary);
+}
+
+.about-des h1{
+    color: var(--dark);
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.about-des span{
+    color: var(--primary);
+    font-family:var(--heading-font);
+}
+
+.about-des p{
+    font-size:15px;
+    line-height:30px;
+    color:var(--para);
+}
+
+.about-packages{
+    margin-top:20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    line-height: 10px;
+    padding-bottom: 20px;
+}
+
+.about-packages i{
+    color: var(--primary);
+}
+
+.about-des button{
+    padding: 20px 40px;
+    font-size: 17px;
+    background-color: var(--primary);
+    color: var(--light);
+    border: none;
+
+}
+
+.travel-container{
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.travel-container h3:nth-child(2){
+    color: var(--primary);
+    padding-bottom: 5px;
+}
+
+.travel-container h1{
+    color: var(--dark);
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.travel-guide{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: 20px;
+    padding:0 90px;
+}
+
+.travel-guide img{
+    width:300px;
+    height:320px;
+}
+
+.guide-card h3{
+    padding-top: 30px;
+}
+
+#guide{
+    /* border-bottom: 1px solid brown;
+    border-left: 1px solid brown;
+    border-right: 1px solid brown; */
+    background-color:var(--para);
+    width:100%;
+    background-color:beige;
+}
+
+
+.guide-card{
+    position: relative;
+    line-height: 25px;
+}
+.guide-card img{
+    width:100%;
+   
+}
+
+.travel-icon{    
+    position: absolute;
+    bottom: 65px;
+    width:100%;
+    left:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+   
+
+}
+
+.travel-icon i{
+    font-size: 20px;
+    background-color: var(--light);
+    color: var(--primary);
+    padding: 13px;
+    border-bottom: 2px solid var(--primary);
+    border-radius: 50%;
+    margin-left: 5px;
+    
+}
+
+.travel-icon i:hover{
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+/* media query for responsive div */
+
+@media only screen and (max-width:991px){
+    .about-container{
+        flex-direction: column;
+        padding:0 40px;
+        margin-top:50px;
+    }
+    .about-image{
+        width:100%;
+    }
+    .about-image img{
+        width:100%;
+    }
+    .about-des{
+        width: 100%;
+    }
+    .topic{
+        margin-top:20px;
+    }
+    .travel-guide{
+        display: grid;
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+        padding:0 35px;
+        
+    }
+}
+
+/* media query for responsive about-image */
+@media only screen and (max-width:568px){
+    .travel-guide{
+        display: grid;
+        grid-template-columns: auto;        
+    }
+}
+
+/* media query for responsive about-packages */
+@media only screen and (max-width:520px) {
+
+    .about-packages{
+        grid-template-columns: auto;
+    }
+
+}
+/* travel guides responsive code */
+@media only screen and (min-width:992px) and (max-width:1024px){
+    .guide-card{
+        width:none;
+    }
+    .travel-icon{
+        width:100%;
+        left:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:10px;
+    }
+    .travel-guide img{
+        width:100%;
+        height:320px;
+    }
+    .travel-guide{
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    }
+}
+
+/* responsive for 4k */
+@media only screen and (max-width:991px){
+    .about-container{
+        flex-direction: column;
+        padding:0 40px;
+    }
+    .about-image{
+        width:100%;
+    }
+    .about-image img{
+        width:100%;
+    }
+    .about-des{
+        width: 100%;
+    }
+
+    .travel-guide{
+        display: grid;
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+        padding:0 35px;
+        
+    }
+}
+
+/* media query for responsive about-image */
+@media only screen and (max-width:568px){
+    .travel-guide{
+        display: grid;
+        grid-template-columns: auto;        
+    }
+}
+
+/* media query for responsive about-packages */
+@media only screen and (max-width:520px) {
+
+    .about-packages{
+        grid-template-columns: auto;
+    }
+
+}
+/* travel guides responsive code */
+@media only screen and (min-width:1441px) and (max-width:2560px){
+    .travel-icon{
+        width:100%;
+        left:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:10px;
+    }
+    .travel-guide img{
+        width:100%;
+        height:320px;
+    }
+    .travel-guide{
+        grid-template-columns:repeat(auto-fit,minmax(500px,1fr));
+    }
+}

@@ -9,62 +9,72 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <!-- whole website is inside the main tag -->
-    <main>
-      <!-- this is the whole header and it holds top-bar and navigation bar -->
-        <header>
-                      <!-- this is the top bar -->
-                      <section class="top-bar">
-                          <!-- left side address in top bar -->
-                          <div class="off-address">
-                             <small><i class="fa-solid fa-location-dot"></i>123 street , TamilNadu , India</small>
-                             <small><i class="fa-solid fa-phone"></i>+0123456789</small>
-                             <small><i class="fa-solid fa-envelope-open"></i>tourist@gmail.com</small>
-                          </div> 
-                          <!-- right side social media in top bar -->   
-                          <div class="right-social">
-                              <i class="fa-brands fa-twitter"></i>
-                              <i class="fa-brands fa-facebook"></i>
-                              <i class="fa-brands fa-linkedin-in"></i>
-                              <i class="fa-brands fa-instagram"></i>
-                              <i class="fa-brands fa-youtube"></i>
-                          </div>
-                      </section>
-             <!-- top bar ends -->
-             <!-- navigation bar and banner started --> 
-             <section class="banner">
-                <nav>
-                   <!-- logo -->
-                   <h1><i class="fa-solid fa-location-dot"></i> TOURIST</h1> 
-                  <!-- this input,label and bar icons for responsive navigation bar -->
-                  <input type="checkbox" id="menu-bar"/>
-                  <label for="menu-bar"><i class="fa-solid fa-bars"></i><i class="fa-solid fa-x"></i></label>
-                  <!--<label for="menu-bar"></label>-->
-                   <!-- navigation links -->
-                   <div class="nav-links">
-                      <ul>
-                        <li><a href="#">home</a></li>
-                        <li><a href="#">about</a></li>
-                        <li><a href="#">services</a></li>
-                        <li><a href="#">packages</a></li>
-                        <li class="dropdown-li">
-                          <a>pages <i class="fa-solid fa-angle-down"></i></a>
-                          <ul class="dropdown-menu">
-                              <li><a href="#">destination</a></li>
-                              <li><a href="#">travel guides</a></li>
-                              <li><a href="#">booking</a></li>
-                              <li><a href="#">testimonial</a></li>
-                          </ul>
-                      </li>
-                        <li><a href="#">contact</a></li>
-                        <li class="last-child"><a href="#">register</a></li>
-                      </ul>
-                   </div>
-                </nav>
-             </section>             
-        </header>
-     </main> 
-      
+    <!-- this is the whole header and it holds top-bar and navigation bar -->
+    <header>
+      <!-- this is the top bar -->
+      <section class="top-bar">
+          <!-- left side address in top bar -->
+          <div class="off-address">
+             <small><i class="fa-solid fa-location-dot"></i>123 street , TamilNadu , India</small>
+             <small><i class="fa-solid fa-phone"></i>+0123456789</small>
+             <small><i class="fa-solid fa-envelope-open"></i>tourist@gmail.com</small>
+          </div> 
+          <!-- right side social media in top bar -->   
+          <div class="right-social">
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-youtube"></i>
+          </div>
+      </section>
+<!-- top bar ends -->
+<!-- navigation bar and banner started --> 
+<section class="banner">
+<nav id="top">
+   <!-- logo -->
+   <h1><i class="fa-solid fa-location-dot"></i> TOURIST</h1> 
+  <!-- this input,label and bar icons for responsive navigation bar -->
+  <input type="checkbox" id="menu-bar"/>
+  <label for="menu-bar"><i class="fa-solid fa-bars"></i><i class="fa-solid fa-x"></i></label>
+  <!--<label for="menu-bar"></label>-->
+   <!-- navigation links -->
+   <div class="nav-links">
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">packages</a></li>
+        <li class="dropdown-li">
+          <a>pages <i class="fa-solid fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+              <li><a href="#">destination</a></li>
+              <li><a href="#">travel guides</a></li>
+              <li><a href="#">booking</a></li>
+              <li><a href="#">testimonial</a></li>
+          </ul>
+      </li>
+        <li><a href="#">contact</a></li>
+        <li class="last-child"><a href="#">register</a></li>
+      </ul>
+   </div>
+</nav>
+   <!-- banner text -->
+<div class="bannertext-container">
+  <div class="banner-text">
+     <h1>Enjoy Your Vacation With Us</h1>
+     <h3>Make your dreams come true. Explore, Journey, Discover, Adventure.</h3>
+    <div class="searchbox-container">
+       <div class="search-box">
+         <input type="search" placeholder="eg:Indonesia"/>
+         <button>search</button>
+       </div>
+    </div>
+  </div>
+</div>
+</section>     
+<!--demo-->
+</header>
 
                     <!------- Overall About Page ------->
     <div class="overall">
@@ -80,7 +90,17 @@
 
                     <!------- About Description------->
          <div class="about-des"> 
-           <h3> ABOUT US</h2>
+          <div class="topic">
+          
+            <h3> ABOUT US</h3>
+
+            <div class="right-side">
+              <hr class="top">
+              <hr class="bottom">
+            </div>
+          </div>
+          
+           
            <h1> Welcome to <span> Tourist </span> </h1>
            <p> Tourism is a social, cultural and economic phenomenon which entails the movement of people to countries or places outside their usual environment for personal or business/professional purposes.</p>
            <p> Tourism is the largest and fastest-growing industry across the world. It is a source of revenue and employment.</p>
@@ -102,15 +122,36 @@
 
                      <!------- Travel Guides --------->
       <div class="travel-container">
-        <h3> TRAVEL GUIDE </h3>
+
+        <div class="topic">
+
+          <div class="left-side">
+            <hr class="top">
+            <hr class="bottom">
+          </div>
+
+          <h3> TRAVEL GUIDE</h3>
+
+          <div class="right-side">
+            <hr class="top">
+            <hr class="bottom">
+          </div>
+
+        </div>
+        
+        
         <h1> Meet our Guide </h1>
 
                     <!------- Guide Cards ------->
         <div class="travel-guide">
         <div class="travel-guide1 guide-card">
           <img src="images/team-1.jpg"/>
-          <h3> John Morrison </h3>
-          <p> Escort</p>
+
+          <div id="guide">
+            <h3> John Morrison </h3>
+            <p> Escort</p>
+          </div>
+          
           <div class="travel-icon">
             <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook-f"></i> </a>
             <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
@@ -120,8 +161,12 @@
           
         <div class="travel-guide2 guide-card">
           <img src="images/team-2.jpg"/>
-          <h3> Amy Adams </h3>
-          <p> Escort</p> 
+          
+          <div id="guide">
+            <h3> Amy Adams </h3>
+            <p> Escort</p> 
+          </div>
+          
           <div class="travel-icon">
             <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook-f"></i> </a>
             <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
@@ -131,8 +176,12 @@
 
         <div class="travel-guide3 guide-card">
           <img src="images/team-3.jpg"/>
-          <h3> George Mathews </h3>
-          <p> Escort</p> 
+
+          <div id="guide">
+            <h3> George Mathews </h3>
+            <p> Escort</p>
+          </div>
+           
           <div class="travel-icon">
             <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook-f"></i> </a>
             <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
@@ -142,8 +191,12 @@
 
         <div class="travel-guide4 guide-card">
           <img src="images/team-4.jpg"/>
+
+        <div id="guide">
           <h3> Emma Stone </h3>
           <p> Escort</p>
+        </div>
+          
           <div class="travel-icon">
             <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook-f"></i> </a>
             <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
