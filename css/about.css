@@ -1,4 +1,4 @@
-                    /* nunito sans serief font family only for heading tag in website website */
+/* nunito sans serief font family only for heading tag in website website */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
 /* poopins fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -19,6 +19,7 @@ html{
     --dark: #14141F;
     --heading-font:'Nunito', sans-serif;
     --content-font: 'Poppins', sans-serif;
+    --para:#808080;
 }
 /* font styles for heading tag */
 h1,h2,h3,h4,h5,h6{
@@ -66,6 +67,16 @@ header .top-bar{
     background-repeat:no-repeat;
     background-size:cover;
 }
+
+.banner-text p{
+    color: var(--light);
+    text-align: center;
+}
+
+.banner-text p span{
+    color: var(--primary);
+}
+
 /* navigation bar styles */
 nav{
     background-color:var(--light);
@@ -162,7 +173,7 @@ ul li .fa-angle-down{
 /* navigaion bar sicky at the top:0 */
 header nav{
     position:sticky;
-    top: 0 !important;
+    top: 0;
 }
 /* dropdown menu design */
 nav ul li{
@@ -417,7 +428,6 @@ footer .copyright{
 /* responsive code for footer */
 @media only screen and (max-width:768px){
     footer{
-        background-color:green;
         padding-right:4rem;
         padding-left:4rem;
     }
@@ -430,7 +440,6 @@ footer .copyright{
 }
 @media only screen and (max-width:325px){
     footer{
-        background-color:green;/*sir isn't working*/
         padding-right:2rem;
         padding-left:2rem;
     }
@@ -452,8 +461,6 @@ footer .copyright{
 }
 /* to top button designs */
 .to-top{
-    height:8%;
-    width:4.5%;
     background-color:var(--secondary);
     position:fixed;
     right:10px;
@@ -461,6 +468,7 @@ footer .copyright{
     display:flex;
     justify-content:center;
     align-items:center;
+    padding:10px;
 }
 .to-top:hover{
     background-color:var(--primary);
@@ -468,33 +476,53 @@ footer .copyright{
     color: var(--light) !important;
 }
 
-
+/* about paage css code */
+/* about us page styles starts here */
 .about-container{
     width:100%;
     display: flex;
     justify-content:center;
     align-items: center;
     gap: 50px;
-    padding: 80px 50px;
+    padding: 80px 90px;
+    /* background-color:yellow; */
 }
-
+/* topic contains (about us heading) and rightside double line,left side double line */
 .topic{
     display: flex;
     gap: 10px;
     justify-content: center;
     align-items: center;
 }
-
-.topic .bottom{
-    width: 60px;
-    border: 1px solid var(--primary);
+/* desig line with topic */
+.topic .right-side .bottom{
+    width: 70px;
+    height:3px;
     margin-top: 8px;
+    border-top-right-radius: 10px;
+    background-color:var(--primary);
 }
 
-.topic .top{
+.topic .right-side .top{
     width: 40px;
-    border: 1px solid var(--primary);
-    /* margin-bottom: 6px; */
+    border-bottom-right-radius: 10px;
+    height:3px;
+    background-color:var(--primary);
+}
+.topic .left-side .bottom{
+    width:70px;
+    height:3px;
+    margin-top: 8px;
+    border-top-right-radius: 10px;
+    background-color:var(--primary);
+}
+
+.topic .left-side .top{
+    width: 40px;
+    margin-left:30px;
+    border-bottom-right-radius: 10px;
+    height:3px;
+    background-color:var(--primary);
 }
 
 .about-image{
@@ -503,7 +531,8 @@ footer .copyright{
 
 .about-image img{
     width:100%;
-    height: 425px;
+    height:460px;
+
 }
 
 .about-des{
@@ -528,13 +557,17 @@ footer .copyright{
 
 .about-des span{
     color: var(--primary);
+    font-family:var(--heading-font);
 }
 
 .about-des p{
-    padding-bottom: 20px;
+    font-size:15px;
+    line-height:30px;
+    color:var(--para);
 }
 
 .about-packages{
+    margin-top:20px;
     display: grid;
     grid-template-columns: auto auto;
     line-height: 10px;
@@ -575,6 +608,7 @@ footer .copyright{
     grid-template-columns: auto auto auto auto;
     justify-content: center;
     gap: 20px;
+    padding:0 90px;
 }
 
 .travel-guide img{
@@ -587,21 +621,44 @@ footer .copyright{
 }
 
 #guide{
-    border-bottom: 1px solid brown;
-    border-left: 1px solid brown;
-    border-right: 1px solid brown;
+    background-color:var(--para);
+    width:100%;
+    background-color:beige;
 }
 
 
 .guide-card{
     position: relative;
     line-height: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.guide-card .guide-image{
+    width:100%;
+    height: 350px;
+    overflow: hidden;   
+}
+
+.guide-card .guide-image>img{
+    width: 100%;
+    height:100%;
+    transition: 2s all;
+}
+
+.guide-card:hover >.guide-image {
+    transform: scale(0.9);
+    cursor: zoom-in;}
 
 .travel-icon{    
     position: absolute;
     bottom: 65px;
-    left: 80px;
+    width:100%;
+    left:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+   
 
 }
 
@@ -613,6 +670,7 @@ footer .copyright{
     border-bottom: 2px solid var(--primary);
     border-radius: 50%;
     margin-left: 5px;
+    
 }
 
 .travel-icon i:hover{
@@ -625,15 +683,26 @@ footer .copyright{
 @media only screen and (max-width:991px){
     .about-container{
         flex-direction: column;
+        padding:0 40px;
+        margin-top:50px;
     }
-
+    .about-image{
+        width:100%;
+    }
+    .about-image img{
+        width:100%;
+    }
     .about-des{
         width: 100%;
     }
-
+    .topic{
+        margin-top:20px;
+    }
     .travel-guide{
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+        padding:0 35px;
+        
     }
 }
 
@@ -653,8 +722,84 @@ footer .copyright{
     }
 
 }
+/* travel guides responsive code */
+@media only screen and (min-width:992px) and (max-width:1024px){
+    .guide-card{
+        width:none;
+    }
+    .travel-icon{
+        width:100%;
+        left:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:10px;
+    }
+    .travel-guide img{
+        width:100%;
+        height:320px;
+    }
+    .travel-guide{
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    }
+}
 
+/* responsive for 4k */
+@media only screen and (max-width:991px){
+    .about-container{
+        flex-direction: column;
+        padding:0 40px;
+    }
+    .about-image{
+        width:100%;
+    }
+    .about-image img{
+        width:100%;
+    }
+    .about-des{
+        width: 100%;
+    }
 
+    .travel-guide{
+        display: grid;
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+        padding:0 35px;
+        
+    }
+}
 
+/* media query for responsive about-image */
+@media only screen and (max-width:568px){
+    .travel-guide{
+        display: grid;
+        grid-template-columns: auto;        
+    }
+}
 
+/* media query for responsive about-packages */
+@media only screen and (max-width:520px) {
+
+    .about-packages{
+        grid-template-columns: auto;
+    }
+
+}
+/* travel guides responsive code */
+@media only screen and (min-width:1441px) and (max-width:2560px){
+    .travel-icon{
+        width:100%;
+        left:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:10px;
+    }
+    .travel-guide img{
+        width:100%;
+        height:320px;
+    }
+    .travel-guide{
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    }
+}
 
