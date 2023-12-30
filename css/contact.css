@@ -1,4 +1,4 @@
-/* nunito sans serief font family for whole website */
+/*                  nunito sans serief font family for whole website */
 @import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
 
 /*                                over all web main container style          */
@@ -20,39 +20,40 @@
     height: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     gap: 10px;
 }
 .inner-top-box h1{
-    color: rgb(25, 25, 71);
+    color: #022b42;
     font-size: 40px;
 }
-.inner-top-box h4{
+.inner-top-box h5{
     color:#6fc210;
-    font-size: 25px;
+    font-size: 17px;
 }
 
 /*                                           Buttom message box container */
 .inner-bottom-box{
     width: 100%;
-    height: 450px;
-    display: flex;
+    min-height: 450px;
+    display: grid;
+    grid-template-columns:repeat(3,320px) ;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
 }
  
 /*                                      first form box destails styles  */
 
 .first-form-box{
-    width: 370px;
-    min-height: 350px;
+    width: 320px;
+    height: 350px;
     padding: 8px;
 }
 .first-form-box >h3{
     font-size: 22px;
     padding: 10px 0;
-    color: rgb(23, 23, 70)     ;
+    color: rgb(23, 23, 70);
     
 }
 .first-form-box p{
@@ -88,16 +89,15 @@
 /*                                      second map form box destails styles  */
 
 .second-map-box{
-    width: 370px;
+    width: 320px;
     height: 350px;
 }
 
 /*                                      Third contact form box destails styles  */
 
 .third-form-box{
-    width: 370px;
+    width: 320px;
     height: 350px;
-    padding: 10px;
 }
 .third-form-box input{
     padding: 20px;
@@ -117,13 +117,72 @@
     font-size: 18px;
 }
 .first-in{
-    width: 47%;
+    width: 49%;
 }
 .last-in{
     width: 100%;
 }
-.space-in{
-    margin-right: 15px;
+
+/*                       Responsive design styles  */
+
+/*                              Tab Screen  */
+@media only screen and (min-width:750px) and (max-width:990px){
+    .inner-top-box h1{
+        font-size: 35px;
+    }
+    .inner-bottom-box{
+        grid-template-columns: repeat(2,350px);
+    }
+    .first-form-box{
+        width: auto;
+        margin-top: 30px;
+    }
+    .second-map-box{
+        width: auto;
+        margin-top: 30px;
+
+    }
+    .first-in{
+        width: 49%;
+    }
+    .space-in{
+        margin-right: 5px;
+    }
+    .third-form-box{
+        width: 700px;
+        margin-top: 30px;
+    }
 }
 
-/*                       Ressponsiv design styles  */
+/*                           Mobile Screen  */
+
+@media only screen  and (max-width:750px){
+    .inner-top-box h1{
+        font-size: 30px;
+    }
+    .inner-bottom-box{
+        grid-template-columns: auto;
+        width: auto;
+        padding: 10px;
+    }
+    .first-form-box{
+        width: auto;
+        margin-top: 30px;
+        margin: 0px 50px;
+
+    }
+    .second-map-box{
+        width: auto;
+        margin-top: 30px;
+        margin: 0px 50px;
+        
+    }
+    .third-form-box{
+        margin-top: 30px;
+        width: auto;
+        margin: 0px 50px;
+    }
+    .first-in{
+        width: 100%;
+    }
+}
