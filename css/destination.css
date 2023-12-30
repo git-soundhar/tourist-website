@@ -1,7 +1,12 @@
+/* nunito sans serief font family only for heading tag in website website */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+/* poopins fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	font-family:var(--content-font);
 }
 
 html{
@@ -255,9 +260,6 @@ nav input{
     color:var(--light);
     font-size: 18px;
 }
-
-
-
 
 /* media query for responsive navigation bar */
 @media only screen and (max-width:1033px){
