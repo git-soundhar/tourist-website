@@ -19,6 +19,7 @@ html{
     --dark: #14141F;
     --heading-font:'Nunito', sans-serif;
     --content-font: 'Poppins', sans-serif;
+    --para:#808080;
 }
 /* font styles for heading tag */
 h1,h2,h3,h4,h5,h6{
@@ -162,7 +163,7 @@ ul li .fa-angle-down{
 /* navigaion bar sicky at the top:0 */
 header nav{
     position:sticky;
-    top: 0 !important;
+    top: 0;
 }
 /* dropdown menu design */
 nav ul li{
@@ -675,7 +676,9 @@ footer .copyright{
     .about-des{
         width: 100%;
     }
-
+    .topic{
+        margin-top:20px;
+    }
     .travel-guide{
         display: grid;
         grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
