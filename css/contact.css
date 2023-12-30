@@ -40,7 +40,7 @@
     grid-template-columns:repeat(3,320px) ;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
 }
  
 /*                                      first form box destails styles  */
@@ -185,5 +185,23 @@
 
     .first-in{
         width: 100%;
+    }
+}
+
+/*                     Loptop Screen Responsive  */
+
+@media only screen and (min-width:990px) {
+    .inner-bottom-box{
+        gap: 10px;
+        padding: 30px;
+    }
+    .first-form-box{
+        width: 300px;
+    }
+    .second-map-box{
+        width: 300px;
+    }
+    .third-form-box{
+        width:300px;
     }
 }
