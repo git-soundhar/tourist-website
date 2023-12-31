@@ -335,12 +335,6 @@ nav input{
 
 
 
-
-
-
-
-
-
 .topic-container {
 
     width: 250px;
@@ -376,6 +370,9 @@ nav input{
 /* <--------- topic container end ------> */
 
 
+.destination{
+	padding: 25px;
+}
 
 .destination > h1{
 	text-align: center;
@@ -386,7 +383,7 @@ nav input{
 	height: 70vh;
 	display: flex;
 	gap: 10px;
-	padding: 2px 70px;
+	padding: 2px 90px;
 	box-sizing: border-box;
 }
 
@@ -510,4 +507,103 @@ nav input{
 	}
 
 }
+
+
+
+/* footer design starts */
+html{
+    font-size:16px;
+}
+footer{
+    background-color:var(--dark);
+    padding-top:5rem;
+    padding-right:7rem;
+    padding-left:7rem;
+    color:var(--light);
+}
+.footer-content{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    padding-bottom:50px;
+    text-align:left;
+}
+
+/*footer content containd 4 section(contact,company,gallery,newsletter)*/
+/* gallery section design */
+footer .gallery img{
+    height:30%;
+    width:30%;
+    border:3px solid var(--light);
+}
+/* footer>company section designs */
+.company p i{
+   padding-right:5px;
+}
+.company p:hover{
+   letter-spacing:2px;
+   transition:ease 1s;
+}
+footer h3{
+    padding-bottom:15px;
+}
+.company p,.contact p,.newsletter p{
+    padding:5px;
+}
+/* footer content >contact section designs */
+.contact .contact-icons i{
+   border:1px solid var(--light);
+   border-radius:50%;
+   padding:8px;
+}
+.contact .contact-icons{
+    padding-top:15px;
+}
+.contact i{
+    padding-right:8px;
+}
+.contact-icons i:hover{
+    background-color:var(--light);
+    color:var(--primary);
+    transition:ease 1s;
+}
+/* footer content > news letter section designs */
+footer .newsletter .footer-search{
+    /* width:100%; */
+    background-color:var(--dark);
+    position:relative;
+    background-color:#FE8800;
+}
+.footer-search button{
+    position:absolute;
+    right:8px;
+    padding:10px;
+    top:13px;
+    background-color:var(--primary);
+    color:var(--light);
+    border:0;   
+}
+.footer-search input{
+    width:100%;
+    padding:20px;
+    border-color:var(--primary);
+    outline-color: var(--primary);
+    outline-offset:1px;
+    padding-right:200px;
+}
+/* footer copy right section designs */
+footer .copyright{
+    display:flex;
+    justify-content:space-between;
+    padding:30px 0;
+}
+.copyright span{
+    border-right:1px solid var(--light);
+    padding:0 10px;
+    display:inline-block;
+   
+}
+.copyright .bord-unset{
+    border:unset;
+}
+
 
