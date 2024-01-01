@@ -67,6 +67,11 @@ header .top-bar{
     background-repeat:no-repeat;
     background-size:cover;
 }
+
+.banner-text p{
+    background-color:var(--primary)
+}
+
 /* navigation bar styles */
 nav{
     background-color:var(--light);

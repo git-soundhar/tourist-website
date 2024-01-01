@@ -24,11 +24,18 @@ html{
 /* font styles for heading tag */
 h1,h2,h3,h4,h5,h6{
     font-family:var(--heading-font);
+}   
+body {
+    font-size: 16px;
 }
 /* <--------- overall tourist poackage style--------> */
 /* <---- navbar container start----------> */
-/* responsive font-size */
+/* styles for header section */
 /* top-bar styles */
+.Overall-package-conatiner {
+    width: 100%;
+    min-height: 100%;
+}
 header .top-bar{
     height:45px;
     background-color:var(--dark);
@@ -67,7 +74,12 @@ header .top-bar{
     background-position:center;
     background-repeat:no-repeat;
     background-size:cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 /* navigation bar styles */
 nav{
     background-color:var(--light);
@@ -78,7 +90,7 @@ nav{
     height:80px;
     padding:0px 30px;
     background-color:transparent;
-    z-index:9999;
+    z-index:999;
 }
 /* logo design */
 nav h1{
@@ -164,7 +176,7 @@ ul li .fa-angle-down{
 /* navigaion bar sicky at the top:0 */
 header nav{
     position:sticky;
-    top: 0 !important;
+    top: 0;
 }
 /* dropdown menu design */
 nav ul li{
@@ -190,7 +202,7 @@ ul .dropdown-li:hover .dropdown-menu{
     display:block;
 }
 /* responsive navigation bar styles */
-nav .fa-bars,nav label{
+nav .bar-menu,nav label{
     display:none;
     color:var(--light);
 }
@@ -198,70 +210,20 @@ nav input{
     display:none;
 }
 /* banner text styles */
-.banner .bannertext-container{
-    width:100%;
-    height:calc(100vh - 80px);
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.banner > h1 {
+    text-align: center;
+    color: var(--light);
+    font-size: 6cqmax;
+    margin: auto;
 }
-.banner .bannertext-container h1{
-    text-align:center;
-    font-size:48px;
-    color:var(--light);
-    padding:15px 0;
-}
-.banner .bannertext-container h3{
-    text-align:center;
-    color:var(--light);
-    padding:10px;
-}
-.bannertext-container .searchbox-container{
-   width:100%;
-   /* background-color:var(--primary); */
-  display:flex;
-  justify-content:center;
-  padding:10px;
-}
-/* style for search input container */
-.bannertext-container .search-box{
-    text-align:center;
-    position:relative;
-    width:100%;
-    text-align:center;
-}
-/* style for search input */
-.search-box input[type="search"]{
-    width:100%;
-    padding:18px 15px;
-    border-radius:30px;
-    border:none;
-    outline-color:var(--primary);
-    outline-offset: 2px;
-    z-index:-1;
-}
-.search-box input[type="search"]::placeholder{
-    font-size:18px;
-}
-/*styles button inside the search box */
-.search-box button{
-    padding:10px 15px;
-    border-radius:30px;
-    border:none;
-    position:absolute;
-    right:10px;
-    top:5px;
-    background-color:var(--primary);
-    color:var(--light);
-    font-size: 18px;
-}
+
 /* media query for responsive navigation bar */
 @media only screen and (max-width:1033px){
-    nav .fa-bars,nav label{
+    nav .bar-menu,nav label{
         display:inline-block;
-       
+        border: none;
     }
-    nav .fa-x{
+    nav .x-bar{
         display:none;
         font-weight:bold;
         font-size:32px;
@@ -301,14 +263,14 @@ nav input{
     nav input:checked~.nav-links{
             left:0;
     }
-    nav label .fa-bars{
+    nav label .bar-menu{
         font-size:32px;
         font-weight:bold;
     }
-    nav input:checked ~label .fa-bars{
+    nav input:checked ~label .bar-menu{
         display:none;
    }
-   nav input:checked ~label .fa-x{
+   nav input:checked ~label .x-bar{
      display:inline-block;
      font-weight:bold;
      color:var(--light-color);
@@ -322,28 +284,12 @@ nav input{
    }
 }
 /* <---- navbar container end----------> */
-/* <------------- banner style start-----------> */
-.banner{
-    height:100vh;
-    width:100%;
-    background:linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)),url('../images/bg-hero.jpg');
-    background-position:center;
-    background-repeat:no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* <---------- banner style for media querry ----------> */
-.banner > h1 {
-    text-align: center;
-    color: var(--light);
-    font-size: 6cqmax;
-} 
+
 /* <------------- awesome-container ------------------> */
 .awesom-container {
     width: 100%;
     min-height: 100%;
-    padding: 50px;
+    padding: 70px;
 }
 .topic-container {
 
@@ -520,6 +466,7 @@ nav input{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 40px 20px;
 }
 .booking-container header {
     width: 90%;
@@ -583,11 +530,6 @@ nav input{
     font-size: 14px;
     transition: all 0.30s ease;
 }
-.booking-container form aside {
-    width: 100%;
-    height: 2px;
-    background-color: var(--light);
-}
 .booking-container form input,select,textarea {
     width: 100%;
     background: none;
@@ -641,7 +583,7 @@ nav input{
     left: 20px;
     font-size: 14px;
 }
-.booking-container form input:focus ~ label, input:valid ~ label, select:focus ~ label,select:valid ~ label {
+.booking-container form .date-des .date {
     background-color: var(--light);
     color: var(--dark);
     padding: 0px 8px;
@@ -650,7 +592,20 @@ nav input{
     transform: translateY(-22px);
     left: 30px;
 }
-.booking-container form figure textarea:valid ~ label,textarea:focus ~ label {
+.booking-container form input:focus ~ label, 
+.booking-container form input:valid ~ label,
+.booking-container form select:focus ~ label,
+.booking-container form select:valid ~ label {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 0px 8px;
+    border-radius: 20px;
+    pointer-events: all;
+    transform: translateY(-22px);
+    left: 30px;
+}
+.booking-container form figure textarea:valid ~ label,
+.booking-container form textarea:focus ~ label {
     background-color: var(--light);
     color: var(--dark);
     padding: 0px 8px;
@@ -682,6 +637,7 @@ nav input{
 .process-container {
     width: 100%;
     min-height: 100vh;
+    padding: 40px 90px;
 }
 .process-container > h1 {
     font-size: 8cqmin;
@@ -690,11 +646,6 @@ nav input{
     text-align: center;
 }
 /* <------process container in easy steps-------> */
-.process-container {
-    width: 100%;
-    min-height: 100vh;
-    padding: 40px 70px;
-}
 /* <----- 2 line this container style start -----> */
 .process-container .easy-steps {
     padding-top: 80px;
@@ -745,7 +696,7 @@ nav input{
 .process-container .easy-steps figure > .line2 {
     width: 230px;
 }
-.process-container .easy-steps i {
+.process-container .easy-steps  i {
     color: var(--light);
     background-color: var(--primary);
     font-size: 50px;
@@ -764,15 +715,22 @@ nav input{
         padding: 40px 10px;
     }
     .place-container {
-        padding: 0%;
+        padding: 0px;
+    }
+    .booking-container {
+        padding: 10px;
     }
     .booking-container header {
-        width: 95%;
+        width: 100%;
         display: grid;
         grid-template-columns: 100%;
         padding: 20px;
         gap: 30px;
     }
+    .booking-container form {
+        padding: 0px;
+    }
+    
     .booking-container header > article {
         display: flex;
         flex-direction: column;
@@ -782,9 +740,18 @@ nav input{
     .booking-container form {
         padding: 0%;
     }
+    .booking-container form figure {
+        width: 98%;
+    }
     .process-container {
         padding: 40px 10px;
-    }    
+    }  
+    .place-container .discrption div > p {
+        padding: 12px 4px;
+    }  
+    .place-container .discrption div > p:nth-child(2) {
+        padding: 12px;
+    }
 }
 @media screen and (min-width:500px) and (max-width:1200px) {
     .place-container {
@@ -797,7 +764,6 @@ nav input{
     }
     .place-container header {
         width: 350px;
-        /* flex-grow: 0.5; */
     }
     .process-container .easy-steps {
         padding-top: 80px;
@@ -842,9 +808,6 @@ nav input{
 }
 /* <--------- footer container start ------>*/
 /* footer design starts */
-html{
-    font-size:16px;
-}
 footer{
     background-color:var(--dark);
     padding-top:5rem;
@@ -861,10 +824,14 @@ footer{
 
 /*footer content containd 4 section(contact,company,gallery,newsletter)*/
 /* gallery section design */
-footer .gallery img{
-    height:30%;
-    width:30%;
+footer .gallery div > img{
+    width: 30%;
+    height: 80px;
     border:3px solid var(--light);
+    cursor: pointer;
+}
+footer .gallery div > img:hover{
+    border: 3px solid var(--secondary);
 }
 /* footer>company section designs */
 .company p i{
@@ -873,6 +840,7 @@ footer .gallery img{
 .company p:hover{
    letter-spacing:2px;
    transition:ease 1s;
+   cursor:pointer;
 }
 footer h3{
     padding-bottom:15px;
@@ -899,28 +867,35 @@ footer h3{
 }
 /* footer content > news letter section designs */
 footer .newsletter .footer-search{
-    /* width:100%; */
-    background-color:var(--dark);
     position:relative;
-    background-color:#FE8800;
+    border-radius: 30px;
 }
 .footer-search button{
     position:absolute;
     right:8px;
-    padding:10px;
-    top:13px;
+    padding:4px 10px;
+    top: 8px;
     background-color:var(--primary);
     color:var(--light);
-    border:0;   
+    border: none; 
+    border-radius: 30px; 
+    cursor: pointer; 
 }
 .footer-search input{
     width:100%;
-    padding:20px;
-    border-color:var(--primary);
+    padding:10px;
+    border:3px solid var(--primary);
     outline-color: var(--primary);
-    outline-offset:1px;
-    padding-right:200px;
+    outline:none;
+    padding-right:90px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 4px var(--primary);
+
 }
+.footer-search input:focus{
+    outline: 2px solid var(--primary);
+}
+
 /* footer copy right section designs */
 footer .copyright{
     display:flex;
@@ -939,7 +914,6 @@ footer .copyright{
 /* responsive code for footer */
 @media only screen and (max-width:768px){
     footer{
-        background-color:green;
         padding-right:4rem;
         padding-left:4rem;
     }
@@ -952,7 +926,6 @@ footer .copyright{
 }
 @media only screen and (max-width:325px){
     footer{
-        background-color:green;/*sir isn't working*/
         padding-right:2rem;
         padding-left:2rem;
     }
@@ -974,18 +947,16 @@ footer .copyright{
 }
 /* to top button designs */
 .to-top{
-    height:8%;
-    width:4.5%;
-    background-color:var(--secondary);
     position:fixed;
-    right:10px;
-    bottom:10px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    right:20px;
+    bottom:20px;
+    padding:10px 16px;
+    background-color:var(--primary);
+}
+.to-top a {
+    color: var(--light);
 }
 .to-top:hover{
-    background-color:var(--primary);
     transition:ease 1s;
     color: var(--light) !important;
 }
