@@ -121,7 +121,10 @@
 .last-in{
     width: 100%;
 }
-
+.third-form-box textarea:hover,input:hover{
+    border-color:#61aa0d;
+}
+    
 /*                       Responsive design styles  */
 
 /*                              Tab Screen  */
@@ -130,7 +133,7 @@
         font-size: 35px;
     }
     .inner-bottom-box{
-        grid-template-columns: repeat(2,350px);
+        grid-template-columns: repeat(2,350px); 
     }
     .first-form-box{
         width: auto;
@@ -138,18 +141,19 @@
     }
     .second-map-box{
         width: auto;
-        margin-top: 30px;
+        margin-top: 50px;
 
     }
     .first-in{
         width: 49%;
+        margin-top: 30px;
     }
     .space-in{
         margin-right: 5px;
     }
     .third-form-box{
         width: 700px;
-        margin-top: 30px;
+        margin-top:30px;
     }
 }
 
