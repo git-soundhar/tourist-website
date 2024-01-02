@@ -68,10 +68,6 @@ header .top-bar{
     background-size:cover;
 }
 
-.banner-text p{
-    background-color:var(--primary)
-}
-
 /* navigation bar styles */
 nav{
     background-color:var(--light);
