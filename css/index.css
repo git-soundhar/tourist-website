@@ -25,6 +25,31 @@ html{
 h1,h2,h3,h4,h5,h6{
     font-family:var(--heading-font);
 }
+/* style for scrollbar */
+/* <------ scroll bar -----> */
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(227, 226, 226);
+    border-radius: 20px;
+
+}
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+    background: rgb(179, 175, 175);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
+/* scroll bar styles end */
 /* styles for header section */
 /* responsive font-size */
 /* top-bar styles */
@@ -79,6 +104,10 @@ nav{
     padding:0px 30px;
     background-color:transparent;
     z-index:9999;
+}
+/* active navigation */
+.active{
+    color:var(--primary);
 }
 /* logo design */
 nav h1{
@@ -321,10 +350,534 @@ nav input{
     height:calc(100vh - 80px);
    }
 }
+
+/* css code for packages */
+   /* <------------- awesome-container ------------------> */
+.awesom-container {
+    width: 100%;
+    min-height: 100%;
+    padding: 70px;
+}
+.topic-container {
+
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+/* <---- topic container start--------> */
+.topic-container .topic {
+    padding: 0px 10px;
+    color:var(--primary);
+    font-weight: bolder;
+}
+.topic-container .code {
+    background-color: silver;
+    border: 1px solid var(--primary);
+}
+.topic-container .left-side {
+    text-align: right;
+}
+.topic-container .left-side .top,.bottom {
+    float: right;
+}
+.topic-container .top {
+    width: 40px;
+    margin-bottom: 8px;
+}
+.topic-container .bottom {
+    width: 60px;
+}
+/* <--------- topic container end ------> */
+
+.awesom-container > h1 {
+    font-size: 7cqmin;
+    padding-bottom: 18px;
+    color: rgb(67, 21, 94);
+    text-align: center;
+}
+/* <---awesome-container in place-container ---> */
+.place-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.place-container header {
+    box-shadow: 0px 0px 8px var(--dark);
+    justify-content: center;
+    align-items: center;
+}
+.place-container i {
+    color: var(--primary);
+}
+/* <----- place-container in image --------> */
+.place-container .imgage {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+
+}
+.place-container .imgage > img {
+    width: 100%;
+    height: 100%;
+    transition: all 3s;
+}
+.place-container .imgage > img:hover {
+    cursor: zoom-in;
+    transform: scale(1.2);
+}
+/* <--- place-container in discrption ------> */
+/* <----- .place-container discrption in place -----> */
+.place-container .discrption > div  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.place-container .discrption div > p {
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px 18px;
+    color: var(--secondary);
+}
+.place-container .discrption div > p:hover {
+    color: var(--primary);
+}
+.place-container .discrption div > p:nth-child(2) {
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+}
+.place-container .discrption div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid silver;
+}
+/* <----- .place-container discrption in details -----> */
+.place-container .discrption figcaption {
+    text-align: center;
+    padding: 10px;
+    padding-bottom:20px ;
+}
+.place-container .discrption figcaption h1 {
+    margin-top: 16px;
+    padding: 5px 0px;
+    font-size: 24px;
+}
+.place-container .discrption figcaption p {
+    color: var(--para);
+    padding: 0px 8px;
+    font-size: 16px;
+    line-height:22px;
+}
+/* <------- star icon-container start-----> */
+.place-container .discrption figcaption aside {
+    margin-bottom: 10px;
+}
+/* <----- star icon-container end -----> */
+/* <----- read more and book now container start ------> */
+.place-container .discrption figcaption div {
+    margin: 20px 0px 10px 0px;
+    display: inline-flex;
+    gap: 2px;
+    border: none;
+    border: 1px solid #acce62;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.place-container figcaption div > button {
+    color: var(--light);
+    background-color: var(--primary);
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+.place-container figcaption div > button:hover {
+    background-color:#acce62;
+}
+.place-container figcaption div > .read {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding-left: 24px;
+}
+.place-container figcaption div > .book {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    padding-right: 24px;
+}
+.place-container figcaption div > .read:hover {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+
+}
+.place-container figcaption div > .book:hover {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+
+}
+@media screen and (min-width:1000px) and (max-width:4000px) {
+    .place-container{
+        padding: 10px 20px;
+    }
+}
+/* <--------- .awesom-container end -------> */
+/* <--- online booking container start ------>*/
+.booking-container {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+.booking-container header {
+    width: 90%;
+    min-height: 85%;
+    background:linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)),url('../images/booking.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: var(--light);
+}
+/* <------- online booking ------> */
+.booking-container header > article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+}
+.booking-container header h1 {
+    font-size: 6cqmin;
+} 
+.booking-container header > article p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+.booking-container header > article button {
+    width: 200px;
+    height: 42px;
+    background: none;
+    cursor: pointer;
+    color: var(--light);
+    border-radius: 6px;
+    border: 1px solid var(--light);
+}
+.booking-container header > article button:focus {
+    background-color: var(--light);
+    color: var(--dark);
+}
+/* <------ online booking register ------> */
+.booking-container form {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+.booking-container form article div {
+    height: 60px;
+    padding: 30px 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.booking-container form label {
+    display: block;
+    margin-bottom: 20px;
+    position: absolute;
+    font-size: 14px;
+    transition: all 0.30s ease;
+}
+.booking-container form input,select,textarea {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--light);
+    border: 1px solid var(--light);
+    border-radius: 6px;
+}
+.booking-container form select {
+    height: 50px;
+    padding: 4px 10px;
+}
+.booking-container form input {
+    height: 50px;
+    padding: 4px 10px;
+}
+.booking-container form option {
+    color: var(--dark);
+}
+.booking-container form article {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 10px;
+}
+.booking-container form figure {
+    width: 98%;
+    padding: 4px 10px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.booking-container form figure label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.booking-container form figure textarea {
+    margin: 0%;
+    padding: 20px 20px 10px 20px;
+    border: 1px solid var(--light);
+    transition: all 0.3s ease;
+}
+
+.booking-container form .date-des {
+    margin-top: 10px;
+}
+.booking-container form div > label {
+    top: 42px;
+    left: 20px;
+    font-size: 14px;
+}
+.booking-container form .date-des .date {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 0px 8px;
+    border-radius: 20px;
+    pointer-events: all;
+    transform: translateY(-22px);
+    left: 30px;
+}
+.booking-container form input:focus ~ label, 
+.booking-container form input:valid ~ label,
+.booking-container form select:focus ~ label,
+.booking-container form select:valid ~ label {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 0px 8px;
+    border-radius: 20px;
+    pointer-events: all;
+    transform: translateY(-22px);
+    left: 30px;
+}
+.booking-container form figure textarea:valid ~ label,
+.booking-container form textarea:focus ~ label {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 0px 8px;
+    border-radius: 20px;
+    transform: translateY(-28px);
+}
+.booking-container form button {
+    width: 60%;
+    cursor: pointer;
+    height: 44px;
+    margin: auto;
+    background: none;
+    color: var(--light);
+    border: 1px solid var(--light);
+    border-radius: 6px
+}
+.booking-container form button:hover,button:focus {
+    background-color: #F5F5F5;
+    color: var(--dark);
+}
+@media screen and (min-width:500px) and (max-width:800px) {
+    .booking-container header {
+        grid-template-columns: 50%;
+    }
+}
+/* <--- online booking container end ------>*/
+
+/* <-------- Process container start ------> */
+.process-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 90px;
+}
+.process-container > h1 {
+    font-size: 8cqmin;
+    padding-bottom: 18px;
+    color: rgb(67, 21, 94);
+    text-align: center;
+}
+/* <------process container in easy steps-------> */
+/* <----- 2 line this container style start -----> */
+.process-container .easy-steps {
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.process-container .easy-steps div {
+    min-height: 250px;
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border: 1px solid var(--primary);
+    position: relative;
+}
+.process-container .easy-steps div aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+.process-container .easy-steps div aside > p {
+    line-height: 20px;
+    font-size: 16px;
+    color: var(--para);
+}
+.process-container .easy-steps figure {
+    width: 240px;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    
+}
+.process-container .easy-steps figure hr {
+    display: inline-block;
+    height: 3px;
+    margin: 0%;
+    background-color: var(--primary);
+}
+.process-container .easy-steps figure > .line1 {
+    width: 130px;
+}
+.process-container .easy-steps figure > .line2 {
+    width: 230px;
+}
+.process-container .easy-steps  i {
+    color: var(--light);
+    background-color: var(--primary);
+    font-size: 50px;
+    padding: 28px;
+    border-radius: 50%;
+    position: absolute;
+    top: -54px;
+    box-shadow: 0px 6px 8px 2px var(--para);
+}
+/* <----- 2 line this container style end -----> */
+@media screen and (min-width:300px) and (max-width:900px) {
+    .process-container .easy-steps {
+        gap: 70px;
+    }
+    .awesom-container {
+        padding: 40px 10px;
+    }
+    .place-container {
+        padding: 0px;
+    }
+    .booking-container {
+        padding: 10px;
+    }
+    .booking-container header {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        padding: 20px;
+        gap: 30px;
+    }
+    .booking-container form {
+        padding: 0px;
+    }
+    
+    .booking-container header > article {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0%;
+    }
+    .booking-container form {
+        padding: 0%;
+    }
+    .booking-container form figure {
+        width: 98%;
+    }
+    .process-container {
+        padding: 40px 10px;
+    }  
+    .place-container .discrption div > p {
+        padding: 12px 4px;
+    }  
+    .place-container .discrption div > p:nth-child(2) {
+        padding: 12px;
+    }
+}
+@media screen and (min-width:500px) and (max-width:1200px) {
+    .place-container {
+        padding: 10px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .place-container header {
+        width: 350px;
+    }
+    .process-container .easy-steps {
+        padding-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 80px;
+    }
+    .process-container .easy-steps div {
+        width: 300px;
+        min-height: 230px;
+        padding: 30px 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        border: 1px solid var(--primary);
+        position: relative;
+    }
+    .place-container .discrption div > p {
+        display: inline-block;
+        text-align: center;
+        font-size: 16px;
+        padding: 12px 10px;
+        color: var(--secondary);
+    }
+    .process-container .easy-steps div {
+        height: 280px;
+    }
+
+}
+/* <-------- .process-container end ----------> */
+@media screen and (min-width:300px) and (max-width:500px) {
+    .booking-container form article {
+        grid-template-columns: 100%;
+    }
+    .process-container .easy-steps div {
+        height: 280px;
+    }
+}
+/* packages css code ends  */
 /* footer design starts */
 html{
     font-size:16px;
-}
+}/* footer design starts */
 footer{
     background-color:var(--dark);
     padding-top:5rem;
@@ -341,10 +894,14 @@ footer{
 
 /*footer content containd 4 section(contact,company,gallery,newsletter)*/
 /* gallery section design */
-footer .gallery img{
-    height:30%;
-    width:30%;
+footer .gallery div > img{
+    width: 30%;
+    height: 80px;
     border:3px solid var(--light);
+    cursor: pointer;
+}
+footer .gallery div > img:hover{
+    border: 3px solid var(--secondary);
 }
 /* footer>company section designs */
 .company p i{
@@ -353,6 +910,7 @@ footer .gallery img{
 .company p:hover{
    letter-spacing:2px;
    transition:ease 1s;
+   cursor:pointer;
 }
 footer h3{
     padding-bottom:15px;
@@ -379,28 +937,35 @@ footer h3{
 }
 /* footer content > news letter section designs */
 footer .newsletter .footer-search{
-    /* width:100%; */
-    background-color:var(--dark);
     position:relative;
-    background-color:#FE8800;
+    border-radius: 30px;
 }
 .footer-search button{
     position:absolute;
     right:8px;
-    padding:10px;
-    top:13px;
+    padding:4px 10px;
+    top: 8px;
     background-color:var(--primary);
     color:var(--light);
-    border:0;   
+    border: none; 
+    border-radius: 30px; 
+    cursor: pointer; 
 }
 .footer-search input{
     width:100%;
-    padding:20px;
-    border-color:var(--primary);
+    padding:10px;
+    border:3px solid var(--primary);
     outline-color: var(--primary);
-    outline-offset:1px;
-    padding-right:200px;
+    outline:none;
+    padding-right:90px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 4px var(--primary);
+
 }
+.footer-search input:focus{
+    outline: 2px solid var(--primary);
+}
+
 /* footer copy right section designs */
 footer .copyright{
     display:flex;
@@ -442,6 +1007,29 @@ footer .copyright{
     }
 }
 
+/* copy right section responsive code */
+@media only screen and (max-width:1062px){
+    .copyright{
+        flex-direction:column;
+        gap:10px;
+        align-items:center;
+    }
+}
+/* to top button designs */
+.to-top{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    padding:10px 16px;
+    background-color:var(--primary);
+}
+.to-top a {
+    color: var(--light);
+}
+.to-top:hover{
+    transition:ease 1s;
+    color: var(--light) !important;
+}
 /* copy right section responsive code */
 @media only screen and (max-width:1062px){
     .copyright{
@@ -706,9 +1294,6 @@ footer .copyright{
 }
 /* travel guides responsive code */
 @media only screen and (min-width:992px) and (max-width:1024px){
-    .guide-card{
-        width:none;
-    }
     .travel-icon{
         width:100%;
         left:0;
@@ -722,7 +1307,7 @@ footer .copyright{
         height:320px;
     }
     .travel-guide{
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+        grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     }
 }
 
