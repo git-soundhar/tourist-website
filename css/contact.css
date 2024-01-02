@@ -1,13 +1,16 @@
 /*                  nunito sans serief font family for whole website */
 @import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
 
+/* poopins fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 /*                                over all web main container style          */
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+    font-family:var(--content-font);
 }
 
 html{
@@ -20,7 +23,7 @@ html{
     --light: #F5F5F5;
     --dark: #14141F;
     --heading-font:'Nunito', sans-serif;
-    --content-font: 'Poppins', sans-serif;
+    --content-font:'Poppins', sans-serif;
     --para:#808080;
 }
 /* font styles for heading tag */
@@ -38,7 +41,7 @@ header .top-bar{
     justify-content:space-between;
     align-items:center;
     padding:0 3em; 
-    height:50px;
+    height:40px;
 }
 /* left-side address area in top bar */
 .top-bar small i{
@@ -62,7 +65,7 @@ header .top-bar{
 
 /* navigation  bar and banner styles starts */
 .banner{
-    height:100vh;
+    height:80vh;
     width:100%;
     background:linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)),url('../images/bg-hero.jpg');
     background-position:center;
@@ -71,7 +74,11 @@ header .top-bar{
 }
 
 .banner-text p{
-    background-color:var(--primary)
+    color: var(--light);
+    text-align: center;
+}
+.banner-text p span{
+    color: var(--primary);
 }
 
 /* navigation bar styles */
@@ -490,6 +497,7 @@ footer .copyright{
     flex-direction: column;
     justify-content: end;
     gap: 10px;
+    padding-top: 100px;
 }
 .inner-top-box h1{
     color: #022b42;
@@ -509,13 +517,16 @@ footer .copyright{
     justify-content: center;
     align-items: center;
     gap: 25px;
+    margin-bottom: 100px;
 }
+
  
 /*                                      first form box destails styles  */
 
 .first-form-box{
     width: 320px;
     height: 350px;
+    /* padding-left: 90px; */
 }
 .first-form-box >h3{
     font-size: 22px;
@@ -565,6 +576,7 @@ footer .copyright{
 .third-form-box{
     width: 320px;
     height: 350px;
+    /* padding-right: 90px; */
 }
 .third-form-box input{
     padding: 20px;
