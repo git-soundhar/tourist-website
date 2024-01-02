@@ -25,6 +25,31 @@ html{
 h1,h2,h3,h4,h5,h6{
     font-family:var(--heading-font);
 }
+/* style for scrollbar */
+/* <------ scroll bar -----> */
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(227, 226, 226);
+    border-radius: 20px;
+
+}
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+    background: rgb(179, 175, 175);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
+/* scroll bar styles end */
 /* styles for header section */
 /* responsive font-size */
 /* top-bar styles */
