@@ -8,6 +8,33 @@
     box-sizing:border-box;
     font-family:var(--content-font);
 }
+/* <------ scroll bar -----> */
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(227, 226, 226);
+    border-radius: 20px;
+
+}
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+    background: rgb(179, 175, 175);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
+/* <--------- overall tourist poackage style--------> */
+/* <---- navbar container start----------> */
+/* styles for header section */
+/* top-bar styles */
     /* active navi */
 .active{
     color: var(--primary);
@@ -521,28 +548,35 @@ footer h3{
 }
 /* footer content > news letter section designs */
 footer .newsletter .footer-search{
-    /* width:100%; */
-    background-color:var(--dark);
     position:relative;
-    background-color:#FE8800;
+    border-radius: 30px;
 }
 .footer-search button{
     position:absolute;
     right:8px;
-    padding:10px;
-    top:13px;
+    padding:4px 10px;
+    top: 8px;
     background-color:var(--primary);
     color:var(--light);
-    border:0;   
+    border: none; 
+    border-radius: 30px; 
+    cursor: pointer; 
 }
 .footer-search input{
     width:100%;
-    padding:20px;
-    border-color:var(--primary);
+    padding:10px;
+    border:3px solid var(--primary);
     outline-color: var(--primary);
-    outline-offset:1px;
-    padding-right:200px;
+    outline:none;
+    padding-right:90px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 4px var(--primary);
+
 }
+.footer-search input:focus{
+    outline: 2px solid var(--primary);
+}
+
 /* footer copy right section designs */
 footer .copyright{
     display:flex;
