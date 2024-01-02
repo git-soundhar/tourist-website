@@ -466,6 +466,9 @@ footer .copyright{
     color: var(--light) !important;
 }
 /* <------------- footer container end ------> *//* about paage css code */
+/* active navigation */
+.active{
+    color:var(--primary);}
 /* about us page styles starts here */
 .about-container{
     width:100%;
