@@ -8,6 +8,13 @@
     box-sizing:border-box;
     font-family:var(--content-font);
 }
+    /* active navi */
+.active{
+    color: var(--primary);
+}
+.headerp1{
+    color: var(--primary);
+}
 html{
     scroll-behavior: smooth;
 }
@@ -288,7 +295,7 @@ nav input{
     align-items: center;
     margin-top: 10px;
 }
-.box1{
+.servicebox{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -304,12 +311,13 @@ nav input{
     background-color: var(--light);
     width: 300px;
     height: 260px;
-    border: 2px solid var(--dark);
+    /* border: 2px solid var(--dark); */
     margin: 10px;
     padding: 20px;
     border-radius: 7px;
     font-size: 20px;
     padding-top: 15px;
+    box-shadow: var(--para);
     
 }
  h3{
@@ -381,7 +389,7 @@ nav input{
     .b2,.b3,.b4,.b5{
         width:none;
     }
-    .box1{
+    .servicebox{
         /* background-color:yellow; */
         display:grid;
         grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
