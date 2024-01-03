@@ -263,7 +263,7 @@ nav input{
         width:100%;
         left:-100%;
         transition:all 1s;
-        background-color:var(--secondary); 
+        background-color:var(--dark); 
     }
     .nav-links ul{
         flex-direction:column;
@@ -506,7 +506,6 @@ footer .copyright{
     align-items: center;
     gap: 50px;
     padding: 80px 90px;
-    /* background-color:yellow; */
 }
 /* topic contains (about us heading) and rightside double line,left side double line */
 .topic{
