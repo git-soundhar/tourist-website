@@ -9,8 +9,8 @@
 	font-family:var(--content-font);
 }
 
-
 /* <------ scroll bar -----> */
+
 /* width */
 ::-webkit-scrollbar {
     width: 16px;
@@ -23,16 +23,16 @@
 
 }
   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-      border-radius: 20px;
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
     background: rgb(179, 175, 175);
-  }
+ }
   
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+ /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: var(--primary);
-  }
+}
 
 
 html{
@@ -54,8 +54,9 @@ html{
 h1,h2,h3,h4,h5,h6{
     font-family:var(--heading-font);
 }
+
+
 /* styles for header section */
-/* responsive font-size */
 
 /* top-bar styles */
 header .top-bar{
@@ -114,7 +115,28 @@ nav{
     padding:0px 30px;
     background-color:transparent;
     z-index:9999;
+    animation-name:nav-movement;
+    animation-iteration-count:1;
+    animation-timing-function: ease;
+    animation-duration:3s;
 }
+
+@keyframes nav-movement{
+   from{
+    transform:translatex(-100%);
+    opacity:0;
+   }
+   to{
+    transform:translatex(0);
+    opacity:1;
+   }
+}
+
+/* active navigation */
+.active{
+    color:var(--primary);
+}
+
 /* logo design */
 nav h1{
    color:var(--primary);
@@ -220,6 +242,9 @@ ul li .dropdown-menu{
 ul li .dropdown-menu a{
     color:var(--dark);
 }
+ul li .dropdown-menu .active{
+	color: var(--primary);
+}
 /* dropdown view during the hovering */
 ul .dropdown-li:hover .dropdown-menu{
     display:block;
@@ -246,6 +271,7 @@ nav input{
     font-size:48px;
     color:var(--light);
     padding:15px 0;
+    font-family: var(--heading-font);
 }
 .banner .bannertext-container h3{
     text-align:center;
@@ -360,6 +386,8 @@ nav input{
 }
 
 
+/*destination styles start*/
+
 /* <---- topic container start--------> */
 
 .topic-container {
@@ -396,7 +424,8 @@ nav input{
 }
 /* <--------- topic container end ------> */
 
-/*destination styles start*/
+/*destination starts*/
+
 .destination{
 	padding: 25px;
 }
@@ -443,10 +472,6 @@ nav input{
 
 }
 
-/*.img:hover{
-	overflow: hidden;
-	
-}*/
 .img:hover img{
 	transform: scale(1.1);
 }
@@ -470,7 +495,6 @@ nav input{
 	height: 100%;
 	object-fit:cover;
 	transition: all 2s;
-/*	overflow: hidden;*/
 }
 
 .img span{
@@ -494,7 +518,7 @@ nav input{
 }
 
 
-
+/*responsive code for destination page*/
 @media screen and (max-width:950px){
 	.img-collections{
 		flex-direction: column;
@@ -523,10 +547,7 @@ nav input{
 	.img4{
 		height:350px
 	}
-	/*.img-collections2{
-		height: 630px;
-	}*/
-
+	
 }
 
 /*destination styles ends*/
@@ -550,6 +571,7 @@ footer{
 }
 
 /*footer content containd 4 section(contact,company,gallery,newsletter)*/
+
 /* gallery section design */
 footer .gallery div > img{
     width: 30%;
@@ -576,6 +598,7 @@ footer h3{
     padding:5px;
 }
 /* footer content >contact section designs */
+
 .contact .contact-icons i{
    border:1px solid var(--light);
    border-radius:50%;

@@ -111,7 +111,22 @@ nav{
     padding:0px 30px;
     background-color:transparent;
     z-index:999;
+    animation-name:nav-movement;
+    animation-iteration-count:1;
+    animation-timing-function: ease;
+    animation-duration:3s;
+    transition: all 6s
 }
+@keyframes nav-movement{
+    from{
+     transform:translatex(-30%);
+     opacity:0;
+    }
+    to{
+     transform:translatex(0);
+     opacity:1;
+    }
+ }
 /* logo design */
 nav h1{
    color:var(--primary);
@@ -235,6 +250,9 @@ nav input{
     color: var(--light);
     font-size: 6cqmax;
     margin: auto;
+}
+.banner .nav-links ul > .pp a {
+    color: var(--primary);
 }
 
 /* media query for responsive navigation bar */
