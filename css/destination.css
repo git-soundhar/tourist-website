@@ -439,13 +439,14 @@ nav input{
 }
 .img{
 	position: relative;
+	overflow: hidden;
 
 }
 
-.img:hover{
-		overflow: hidden;
+/*.img:hover{
+	overflow: hidden;
 	
-}
+}*/
 .img:hover img{
 	transform: scale(1.1);
 }
@@ -469,6 +470,7 @@ nav input{
 	height: 100%;
 	object-fit:cover;
 	transition: all 2s;
+/*	overflow: hidden;*/
 }
 
 .img span{
@@ -491,28 +493,16 @@ nav input{
 	right: 7px;
 }
 
-@media screen and (max-width:991px){
+
+
+@media screen and (max-width:950px){
 	.img-collections{
-		min-height: 1200px;
 		flex-direction: column;
-		gap: 10px;
+		min-height: 1200px;
 		padding: 5px 15px;
 	}
 	.img-collections1,.img-collections2{
 		width: 100%;
-	}
-	.sub-img,.img2,.img3{
-		height: 250px;
-	}
-	.img4{
-		height:350px
-	}
-	
-
-}
-@media screen and (max-width:991px){
-	.img-collections{
-		padding: 3px 40px;
 	}
 	.sub-img{
 		height: 30%;
@@ -527,11 +517,15 @@ nav input{
 
 	.img2,.img3{
 		width: 100%;
+		height: 250px;
 	}
 	
-	.img-collections2{
-		height: 630px;
+	.img4{
+		height:350px
 	}
+	/*.img-collections2{
+		height: 630px;
+	}*/
 
 }
 
