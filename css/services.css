@@ -8,6 +8,29 @@
     box-sizing:border-box;
     font-family:var(--content-font);
 }
+/* colors for our website */
+:root {
+    --primary: #86B817;
+    --secondary: #808080;
+    --light: #F5F5F5;
+    --dark: #14141F;
+    --warning: #FE8800;
+    --heading-font:'Nunito', sans-serif;
+    --content-font: 'Poppins', sans-serif;
+}
+.active{
+    color: var(--primary);
+}
+html{
+    scroll-behavior: smooth;
+}
+/* font styles for heading tag */
+h1,h2,h3,h4,h5,h6{
+    font-family:var(--heading-font);
+}   
+body {
+    font-size: 16px;
+}
 /* <------ scroll bar -----> */
 /* width */
 ::-webkit-scrollbar {
@@ -35,33 +58,10 @@
 /* <---- navbar container start----------> */
 /* styles for header section */
 /* top-bar styles */
-    /* active navi */
-.active{
-    color: var(--primary);
+.Overall-package-conatiner {
+    width: 100%;
+    min-height: 100%;
 }
-.headerp1{
-    color: var(--primary);
-}
-html{
-    scroll-behavior: smooth;
-}
-/* colors for our website */
-:root {
-    --primary: #86B817;
-    --secondary: #FE8800;
-    --light: #F5F5F5;
-    --dark: #14141F;
-    --heading-font:'Nunito', sans-serif;
-    --content-font: 'Poppins', sans-serif;
-    --para:#808080;
-}
-/* font styles for heading tag */
-h1,h2,h3,h4,h5,h6{
-    font-family:var(--heading-font);
-}
-/* styles for header section */
-/* responsive font-size */
-/* top-bar styles */
 header .top-bar{
     height:45px;
     background-color:var(--dark);
@@ -100,17 +100,11 @@ header .top-bar{
     background-position:center;
     background-repeat:no-repeat;
     background-size:cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-.banner-text p{
-    color: var(--light);
-    text-align: center;
-}
-
-.banner-text p span{
-    color: var(--primary);
-}
-
 
 /* navigation bar styles */
 nav{
@@ -122,7 +116,7 @@ nav{
     height:80px;
     padding:0px 30px;
     background-color:transparent;
-    z-index:9999;
+    z-index:999;
 }
 /* logo design */
 nav h1{
@@ -207,7 +201,7 @@ ul li .fa-angle-down{
 
 /* navigaion bar sicky at the top:0 */
 header nav{
-    position:sticky;
+    position: sticky;
     top: 0;
 }
 /* dropdown menu design */
@@ -234,7 +228,7 @@ ul .dropdown-li:hover .dropdown-menu{
     display:block;
 }
 /* responsive navigation bar styles */
-nav .fa-bars,nav label{
+nav .bar-menu,nav label{
     display:none;
     color:var(--light);
 }
@@ -242,66 +236,134 @@ nav input{
     display:none;
 }
 /* banner text styles */
-.banner .bannertext-container{
-    width:100%;
+.banner > h1 {
+    text-align: center;
+    color: var(--light);
+    font-size: 6cqmax;
+    margin: auto;
+}
+
+/* media query for responsive navigation bar */
+@media only screen and (max-width:1033px){
+    nav .bar-menu,nav label{
+        display:inline-block;
+        border: none;
+    }
+    nav .x-bar{
+        display:none;
+        font-weight:bold;
+        font-size:32px;
+    }
+    .nav-links{
+        position:fixed;
+        top:80px;
+        width:100%;
+        left:-100%;
+        transition:all 1s;
+        background-color:var(--secondary); 
+    }
+    .nav-links ul{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:5px;
+        padding: 10px;
+    }
+    ul li .dropdown-menu{
+        left:110px;
+        top:-100px;
+        z-index:99;
+        background-color:rgba(128, 128, 128,0.4); 
+    }
+    ul li .dropdown-menu li a{
+        color:var(--light);
+        padding:5px 0;
+    }
+    ul li a{
+        font-size:18px;
+        letter-spacing: 2px;
+        padding:10px 0;
+    }
+    header .top-bar{
+        display:none;
+    }
+    nav input:checked~.nav-links{
+            left:0;
+    }
+    nav label .bar-menu{
+        font-size:32px;
+        font-weight:bold;
+    }
+    nav input:checked ~label .bar-menu{
+        display:none;
+   }
+   nav input:checked ~label .x-bar{
+     display:inline-block;
+     font-weight:bold;
+     color:var(--light-color);
+     cursor:pointer;
+   }
+   ul li{
+    padding:0;
+   }
+   .banner .bannertext-container{
     height:calc(100vh - 80px);
-    display:flex;
-    justify-content:center;
-    align-items:center;
+   }
 }
-.banner .bannertext-container h1{
-    text-align:center;
-    font-size:48px;
-    color:var(--light);
-    padding:15px 0;
+@media only screen and (max-width:420px) {
+    .nav-links ul{
+        list-style-type:none;
+        display:flex;
+        justify-content: start;
+        align-items: start;
+        gap:5px;
+        padding:10px 10px;   
+    }   
 }
-.banner .bannertext-container h3{
-    text-align:center;
-    color:var(--light);
-    padding:10px;
+.awesom-container {
+    width: 100%;
+    min-height: 100%;
+    padding: 70px;
 }
-.bannertext-container .searchbox-container{
-   width:100%;
-   /* background-color:var(--primary); */
-  display:flex;
-  justify-content:center;
-  padding:10px;
+.topic-container {
+
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
-/* style for search input container */
-.bannertext-container .search-box{
-    text-align:center;
-    position:relative;
-    width:100%;
-    text-align:center;
+/* <---- topic container start--------> */
+.topic-container .topic {
+    padding: 0px 12px;
+    color:var(--primary);
+    font-weight: bolder;
 }
-/* style for search input */
-.search-box input[type="search"]{
-    width:100%;
-    padding:18px 15px;
-    border-radius:30px;
-    border:none;
-    outline-color:var(--primary);
-    outline-offset: 2px;
-    z-index:-1;
+.topic-container .code {
+    background-color: silver;
+    border: 1px solid var(--primary);
 }
-.search-box input[type="search"]::placeholder{
-    font-size:18px;
+.topic-container .left-side {
+    text-align: right;
 }
-/*styles button inside the search box */
-.search-box button{
-    padding:10px 15px;
-    border-radius:30px;
-    border:none;
-    position:absolute;
-    right:10px;
-    top:5px;
-    background-color:var(--primary);
-    color:var(--light);
-    font-size: 18px;
+.topic-container .left-side .top,.bottom {
+    float: right;
 }
+.topic-container .top {
+    width: 40px;
+    margin-bottom: 8px;
+}
+.topic-container .bottom {
+    width: 60px;
+}
+/* <---- navbar container end----------> */
 /* service css */
 .start h1{
-    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
     font-family: var(--heading-font);
 
 }
@@ -318,7 +380,7 @@ nav input{
 .start{
     padding: 30px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-top: 10px;
 }
@@ -372,47 +434,9 @@ nav input{
     color: var(--light);
 }
 /* Media Qurry */
-/* @media only screen and (min-width: 1440px){
-    .box1{
-        width: 100%;
-        align-items: flex-start;
-        height: 100%;
-    }
-    .b2,.b3,.b5{
-        width: 22%;
-        height: 50%;
-        font-size: 20px;
-    }
-    .b4{
-        width: 23%;
-        height: 210px;
-  
-    }
 
-    
-} */
-/* @media only screen and (min-width: 1496px){
-    .box1{
-        width: 100%;
-        flex-wrap: wrap;
-        flex-direction: row;
-    
-    }
-    .b2,.b3,.b5{
-     
-        width: 20%;
-        height: 50%;
-        font-size: 20px;
-        flex-wrap: wrap;
-    }
-    .b4{
-        width: 20%;
-        height: 220px;
-        font-size: 20px;
-    }
-
-} */
 @media only screen and (min-width:1020px) and (max-width:1340px) {
+    
     .b2,.b3,.b4,.b5{
         width:none;
     }
@@ -491,9 +515,7 @@ nav input{
    }
 }
 /* footer design starts */
-html{
-    font-size:16px;
-}
+/* footer design starts */
 footer{
     background-color:var(--dark);
     padding-top:5rem;
@@ -526,12 +548,14 @@ footer .gallery div > img:hover{
 .company p:hover{
    letter-spacing:2px;
    transition:ease 1s;
+   cursor:pointer;
 }
 footer h3{
     padding-bottom:15px;
 }
 .company p,.contact p,.newsletter p{
     padding:5px;
+    font-size: medium;
 }
 /* footer content >contact section designs */
 .contact .contact-icons i{
@@ -575,7 +599,6 @@ footer .newsletter .footer-search{
     padding-right:90px;
     border-radius: 30px;
     box-shadow: 0px 0px 4px var(--primary);
-
 }
 .footer-search input:focus{
     outline: 2px solid var(--primary);
@@ -632,335 +655,16 @@ footer .copyright{
 }
 /* to top button designs */
 .to-top{
-    background-color:var(--secondary);
     position:fixed;
-    right:10px;
-    bottom:10px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:10px;
+    right:20px;
+    bottom:20px;
+    padding:10px 16px;
+    background-color:var(--primary);
+}
+.to-top a {
+    color: var(--light);
 }
 .to-top:hover{
-    background-color:var(--primary);
     transition:ease 1s;
     color: var(--light) !important;
-}
-
-/* about paage css code */
-/* about us page styles starts here */
-.about-container{
-    width:100%;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    gap: 50px;
-    padding: 80px 90px;
-    /* background-color:yellow; */
-}
-/* topic contains (about us heading) and rightside double line,left side double line */
-.topic{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
-/* desig line with topic */
-.topic .right-side .bottom{
-    width: 70px;
-    height:3px;
-    margin-top: 8px;
-    border-top-right-radius: 10px;
-    background-color:var(--primary);
-}
-
-.topic .right-side .top{
-    width: 40px;
-    border-bottom-right-radius: 10px;
-    height:3px;
-    background-color:var(--primary);
-}
-.topic .left-side .bottom{
-    width:70px;
-    height:3px;
-    margin-top: 8px;
-    border-top-right-radius: 10px;
-    background-color:var(--primary);
-}
-
-.topic .left-side .top{
-    width: 40px;
-    margin-left:30px;
-    border-bottom-right-radius: 10px;
-    height:3px;
-    background-color:var(--primary);
-}
-
-.about-image{
-    width:50%
-}
-
-.about-image img{
-    width:100%;
-    height:460px;
-
-}
-
-.about-des{
-    width: 50%;
-    /* background-color:#b81785; */
-}
-
-.about-des .topic{
-    display: flex;
-    justify-content: start;
-}
-
-
-.about-des h3{
-    color: var(--primary);
-}
-
-.about-des h1{
-    color: var(--dark);
-    font-size: 40px;
-    padding-bottom: 20px;
-}
-
-.about-des span{
-    color: var(--primary);
-    font-family:var(--heading-font);
-}
-
-.about-des p{
-    font-size:15px;
-    line-height:30px;
-    color:var(--para);
-}
-
-.about-packages{
-    margin-top:20px;
-    display: grid;
-    grid-template-columns: auto auto;
-    line-height: 10px;
-    padding-bottom: 20px;
-}
-
-.about-packages i{
-    color: var(--primary);
-}
-
-.about-des button{
-    padding: 20px 40px;
-    font-size: 17px;
-    background-color: var(--primary);
-    color: var(--light);
-    border: none;
-
-}
-
-.travel-container{
-    text-align: center;
-    padding-bottom: 80px;
-}
-
-.travel-container h3:nth-child(2){
-    color: var(--primary);
-    padding-bottom: 5px;
-}
-
-.travel-container h1{
-    color: var(--dark);
-    font-size: 40px;
-    padding-bottom: 20px;
-}
-
-.travel-guide{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: center;
-    gap: 20px;
-    padding:0 90px;
-}
-
-.travel-guide img{
-    width:300px;
-    height:320px;
-}
-
-.guide-card h3{
-    padding-top: 30px;
-}
-
-#guide{
-    /* border-bottom: 1px solid brown;
-    border-left: 1px solid brown;
-    border-right: 1px solid brown; */
-    background-color:var(--para);
-    width:100%;
-    background-color:beige;
-}
-
-
-.guide-card{
-    position: relative;
-    line-height: 25px;
-}
-.guide-card img{
-    width:100%;
-   
-}
-
-.travel-icon{    
-    position: absolute;
-    bottom: 65px;
-    width:100%;
-    left:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-   
-
-}
-
-.travel-icon i{
-    font-size: 20px;
-    background-color: var(--light);
-    color: var(--primary);
-    padding: 13px;
-    border-bottom: 2px solid var(--primary);
-    border-radius: 50%;
-    margin-left: 5px;
-    
-}
-
-.travel-icon i:hover{
-    background-color: var(--primary);
-    color: var(--light);
-}
-
-/* media query for responsive div */
-
-@media only screen and (max-width:991px){
-    .about-container{
-        flex-direction: column;
-        padding:0 40px;
-        margin-top:50px;
-    }
-    .about-image{
-        width:100%;
-    }
-    .about-image img{
-        width:100%;
-    }
-    .about-des{
-        width: 100%;
-    }
-    .topic{
-        margin-top:20px;
-    }
-    .travel-guide{
-        display: grid;
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-        padding:0 35px;
-        
-    }
-}
-
-/* media query for responsive about-image */
-@media only screen and (max-width:568px){
-    .travel-guide{
-        display: grid;
-        grid-template-columns: auto;        
-    }
-}
-
-/* media query for responsive about-packages */
-@media only screen and (max-width:520px) {
-
-    .about-packages{
-        grid-template-columns: auto;
-    }
-
-}
-/* travel guides responsive code */
-@media only screen and (min-width:992px) and (max-width:1024px){
-    .guide-card{
-        width:none;
-    }
-    .travel-icon{
-        width:100%;
-        left:0;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        gap:10px;
-    }
-    .travel-guide img{
-        width:100%;
-        height:320px;
-    }
-    .travel-guide{
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    }
-}
-
-/* responsive for 4k */
-@media only screen and (max-width:991px){
-    .about-container{
-        flex-direction: column;
-        padding:0 40px;
-    }
-    .about-image{
-        width:100%;
-    }
-    .about-image img{
-        width:100%;
-    }
-    .about-des{
-        width: 100%;
-    }
-
-    .travel-guide{
-        display: grid;
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-        padding:0 35px;
-        
-    }
-}
-
-/* media query for responsive about-image */
-@media only screen and (max-width:568px){
-    .travel-guide{
-        display: grid;
-        grid-template-columns: auto;        
-    }
-}
-
-/* media query for responsive about-packages */
-@media only screen and (max-width:520px) {
-
-    .about-packages{
-        grid-template-columns: auto;
-    }
-
-}
-/* travel guides responsive code */
-@media only screen and (min-width:1441px) and (max-width:2560px){
-    .travel-icon{
-        width:100%;
-        left:0;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        gap:10px;
-    }
-    .travel-guide img{
-        width:100%;
-        height:320px;
-    }
-    .travel-guide{
-        grid-template-columns:repeat(auto-fit,minmax(500px,1fr));
-    }
 }
