@@ -35,6 +35,13 @@
 /* <---- navbar container start----------> */
 /* styles for header section */
 /* top-bar styles */
+    /* active navi */
+.active{
+    color: var(--primary);
+}
+.headerp1{
+    color: var(--primary);
+}
 html{
     scroll-behavior: smooth;
 }
@@ -96,8 +103,14 @@ header .top-bar{
 }
 
 .banner-text p{
-    background-color:var(--primary)
+    color: var(--light);
+    text-align: center;
 }
+
+.banner-text p span{
+    color: var(--primary);
+}
+
 
 /* navigation bar styles */
 nav{
@@ -110,7 +123,22 @@ nav{
     padding:0px 30px;
     background-color:transparent;
     z-index:9999;
+    animation-name:nav-movement;
+    animation-iteration-count:1;
+    animation-timing-function: ease;
+    animation-duration:3s;
+    transition: all 6s;
 }
+@keyframes nav-movement{
+    from{
+     transform:translatex(-30%);
+     opacity:0;
+    }
+    to{
+     transform:translatex(0);
+     opacity:1;
+    }
+ }
 /* logo design */
 nav h1{
    color:var(--primary);
@@ -254,7 +282,134 @@ nav input{
   justify-content:center;
   padding:10px;
 }
+/* style for search input container */
+.bannertext-container .search-box{
+    text-align:center;
+    position:relative;
+    width:100%;
+    text-align:center;
+}
+/* style for search input */
+.search-box input[type="search"]{
+    width:100%;
+    padding:18px 15px;
+    border-radius:30px;
+    border:none;
+    outline-color:var(--primary);
+    outline-offset: 2px;
+    z-index:-1;
+}
+.search-box input[type="search"]::placeholder{
+    font-size:18px;
+}
+/*styles button inside the search box */
+.search-box button{
+    padding:10px 15px;
+    border-radius:30px;
+    border:none;
+    position:absolute;
+    right:10px;
+    top:5px;
+    background-color:var(--primary);
+    color:var(--light);
+    font-size: 18px;
+}
+/* service css */
+/* topic contains (about us heading) and rightside double line,left side double line */
+.service-container > h1 {
+    font-size: 7cqmin;
+    padding-bottom: 18px;
+    color: rgb(67, 21, 94);
+    text-align: center;
+}
+.start h1{
+    /* font-size: 30px; */
+    font-family: var(--heading-font);
 
+}
+
+.servicebox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 30px;
+    background-color: var(--light);
+}
+.servicebox i {
+    font-size: 46px;
+    color: var(--primary);
+}
+
+.b2,.b3,.b4,.b5{
+    background-color: var(--light);
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 7px;
+    font-size: 20px;
+    padding-top: 15px;
+    box-shadow: 0px 0px 10px var(--para);
+    overflow: hidden;
+    
+}
+.servicebox h3{
+    padding-top: 15px;
+    font-size: 22px;
+}
+.servicebox p{
+    padding-top: 20px;
+    font-size: large;
+    font-family: var(--content-font);
+ }
+.b2:hover, .b3:hover, .b4:hover, .b5:hover{
+    background-color: var(--primary);
+    color: var(--light);
+    cursor: pointer;
+}
+.b2:hover > i, .b3:hover > i, .b4:hover > i, .b5:hover > i{
+    color: var(--light);
+}
+/* <---- topic container start--------> */
+.topic-container {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+}
+.topic-container .topic {
+    padding: 0px 10px;
+    color:var(--primary);
+    font-weight: bolder;
+}
+.topic-container .left-side,
+.topic-container .right-side {
+    width: 60px;
+}
+.topic-container .code {
+    background-color: silver;
+    border: 1px solid var(--primary);
+}
+.topic-container .left-side {
+    text-align: right;
+}
+
+.topic-container .left-side .top,.bottom {
+    float: right;
+}
+.topic-container .top {
+    width: 40px;
+    margin-bottom: 8px;
+}
+.topic-container .bottom {
+    width: 60px;
+}
+
+/* index */
 /* media query for responsive navigation bar */
 @media only screen and (max-width:1033px){
     nav .fa-bars,nav label{
@@ -320,44 +475,6 @@ nav input{
    .banner .bannertext-container{
     height:calc(100vh - 80px);
    }
-}
-/* testimonials starts here */
-/* testimonial start */
-.topic{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
-/* desig line with topic */
-.topic .right-side .bottom{
-    width: 70px;
-    height:3px;
-    margin-top: 8px;
-    border-top-right-radius: 10px;
-    background-color:var(--primary);
-}
-
-.topic .right-side .top{
-    width: 40px;
-    border-bottom-right-radius: 10px;
-    height:3px;
-    background-color:var(--primary);
-}
-.topic .left-side .bottom{
-    width:70px;
-    height:3px;
-    margin-top: 8px;
-    border-top-right-radius: 10px;
-    background-color:var(--primary);
-}
-
-.topic .left-side .top{
-    width: 40px;
-    margin-left:30px;
-    border-bottom-right-radius: 10px;
-    height:3px;
-    background-color:var(--primary);
 }
 
 /* testimonial start */
@@ -435,10 +552,8 @@ nav input{
 
 /* testimonials ends here */
 /* footer */
+/* <--------- footer container start ------>*/
 /* footer design starts */
-html{
-    font-size:16px;
-}
 footer{
     background-color:var(--dark);
     padding-top:5rem;
@@ -455,10 +570,14 @@ footer{
 
 /*footer content containd 4 section(contact,company,gallery,newsletter)*/
 /* gallery section design */
-footer .gallery img{
-    height:30%;
-    width:30%;
+footer .gallery div > img{
+    width: 30%;
+    height: 80px;
     border:3px solid var(--light);
+    cursor: pointer;
+}
+footer .gallery div > img:hover{
+    border: 3px solid var(--secondary);
 }
 /* footer>company section designs */
 .company p i{
@@ -467,6 +586,7 @@ footer .gallery img{
 .company p:hover{
    letter-spacing:2px;
    transition:ease 1s;
+   cursor:pointer;
 }
 footer h3{
     padding-bottom:15px;
@@ -516,7 +636,6 @@ footer .newsletter .footer-search{
     padding-right:90px;
     border-radius: 30px;
     box-shadow: 0px 0px 4px var(--primary);
-
 }
 .footer-search input:focus{
     outline: 2px solid var(--primary);
@@ -573,335 +692,17 @@ footer .copyright{
 }
 /* to top button designs */
 .to-top{
-    background-color:var(--secondary);
     position:fixed;
-    right:10px;
-    bottom:10px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:10px;
+    right:20px;
+    bottom:20px;
+    padding:10px 16px;
+    background-color:var(--primary);
+}
+.to-top a {
+    color: var(--light);
 }
 .to-top:hover{
-    background-color:var(--primary);
     transition:ease 1s;
     color: var(--light) !important;
 }
-
-/* about paage css code */
-/* about us page styles starts here */
-.about-container{
-    width:100%;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    gap: 50px;
-    padding: 80px 90px;
-    /* background-color:yellow; */
-}
-/* topic contains (about us heading) and rightside double line,left side double line */
-.topic{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
-/* desig line with topic */
-.topic .right-side .bottom{
-    width: 70px;
-    height:3px;
-    margin-top: 8px;
-    border-top-right-radius: 10px;
-    background-color:var(--primary);
-}
-
-.topic .right-side .top{
-    width: 40px;
-    border-bottom-right-radius: 10px;
-    height:3px;
-    background-color:var(--primary);
-}
-.topic .left-side .bottom{
-    width:70px;
-    height:3px;
-    margin-top: 8px;
-    border-top-right-radius: 10px;
-    background-color:var(--primary);
-}
-
-.topic .left-side .top{
-    width: 40px;
-    margin-left:30px;
-    border-bottom-right-radius: 10px;
-    height:3px;
-    background-color:var(--primary);
-}
-
-.about-image{
-    width:50%
-}
-
-.about-image img{
-    width:100%;
-    height:460px;
-
-}
-
-.about-des{
-    width: 50%;
-    /* background-color:#b81785; */
-}
-
-.about-des .topic{
-    display: flex;
-    justify-content: start;
-}
-
-
-.about-des h3{
-    color: var(--primary);
-}
-
-.about-des h1{
-    color: var(--dark);
-    font-size: 40px;
-    padding-bottom: 20px;
-}
-
-.about-des span{
-    color: var(--primary);
-    font-family:var(--heading-font);
-}
-
-.about-des p{
-    font-size:15px;
-    line-height:30px;
-    color:var(--para);
-}
-
-.about-packages{
-    margin-top:20px;
-    display: grid;
-    grid-template-columns: auto auto;
-    line-height: 10px;
-    padding-bottom: 20px;
-}
-
-.about-packages i{
-    color: var(--primary);
-}
-
-.about-des button{
-    padding: 20px 40px;
-    font-size: 17px;
-    background-color: var(--primary);
-    color: var(--light);
-    border: none;
-
-}
-
-.travel-container{
-    text-align: center;
-    padding-bottom: 80px;
-}
-
-.travel-container h3:nth-child(2){
-    color: var(--primary);
-    padding-bottom: 5px;
-}
-
-.travel-container h1{
-    color: var(--dark);
-    font-size: 40px;
-    padding-bottom: 20px;
-}
-
-.travel-guide{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: center;
-    gap: 20px;
-    padding:0 90px;
-}
-
-.travel-guide img{
-    width:300px;
-    height:320px;
-}
-
-.guide-card h3{
-    padding-top: 30px;
-}
-
-#guide{
-    /* border-bottom: 1px solid brown;
-    border-left: 1px solid brown;
-    border-right: 1px solid brown; */
-    background-color:var(--para);
-    width:100%;
-    background-color:beige;
-}
-
-
-.guide-card{
-    position: relative;
-    line-height: 25px;
-}
-.guide-card img{
-    width:100%;
-   
-}
-
-.travel-icon{    
-    position: absolute;
-    bottom: 65px;
-    width:100%;
-    left:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-   
-
-}
-
-.travel-icon i{
-    font-size: 20px;
-    background-color: var(--light);
-    color: var(--primary);
-    padding: 13px;
-    border-bottom: 2px solid var(--primary);
-    border-radius: 50%;
-    margin-left: 5px;
-    
-}
-
-.travel-icon i:hover{
-    background-color: var(--primary);
-    color: var(--light);
-}
-
-/* media query for responsive div */
-
-@media only screen and (max-width:991px){
-    .about-container{
-        flex-direction: column;
-        padding:0 40px;
-        margin-top:50px;
-    }
-    .about-image{
-        width:100%;
-    }
-    .about-image img{
-        width:100%;
-    }
-    .about-des{
-        width: 100%;
-    }
-    .topic{
-        margin-top:20px;
-    }
-    .travel-guide{
-        display: grid;
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-        padding:0 35px;
-        
-    }
-}
-
-/* media query for responsive about-image */
-@media only screen and (max-width:568px){
-    .travel-guide{
-        display: grid;
-        grid-template-columns: auto;        
-    }
-}
-
-/* media query for responsive about-packages */
-@media only screen and (max-width:520px) {
-
-    .about-packages{
-        grid-template-columns: auto;
-    }
-
-}
-/* travel guides responsive code */
-@media only screen and (min-width:992px) and (max-width:1024px){
-    .guide-card{
-        width:none;
-    }
-    .travel-icon{
-        width:100%;
-        left:0;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        gap:10px;
-    }
-    .travel-guide img{
-        width:100%;
-        height:320px;
-    }
-    .travel-guide{
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    }
-}
-
-/* responsive for 4k */
-@media only screen and (max-width:991px){
-    .about-container{
-        flex-direction: column;
-        padding:0 40px;
-    }
-    .about-image{
-        width:100%;
-    }
-    .about-image img{
-        width:100%;
-    }
-    .about-des{
-        width: 100%;
-    }
-
-    .travel-guide{
-        display: grid;
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-        padding:0 35px;
-        
-    }
-}
-
-/* media query for responsive about-image */
-@media only screen and (max-width:568px){
-    .travel-guide{
-        display: grid;
-        grid-template-columns: auto;        
-    }
-}
-
-/* media query for responsive about-packages */
-@media only screen and (max-width:520px) {
-
-    .about-packages{
-        grid-template-columns: auto;
-    }
-
-}
-/* travel guides responsive code */
-@media only screen and (min-width:1441px) and (max-width:2560px){
-    .travel-icon{
-        width:100%;
-        left:0;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        gap:10px;
-    }
-    .travel-guide img{
-        width:100%;
-        height:320px;
-    }
-    .travel-guide{
-        grid-template-columns:repeat(auto-fit,minmax(500px,1fr));
-    }
-}
+/* <------------- footer container end ------> */
