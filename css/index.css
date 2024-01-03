@@ -426,7 +426,6 @@ nav input{
 }
 /* <---- topic container start--------> */
 .topic-container .topic {
-    padding: 0px 10px;
     color:var(--primary);
     font-weight: bolder;
 }
