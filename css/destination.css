@@ -115,7 +115,28 @@ nav{
     padding:0px 30px;
     background-color:transparent;
     z-index:9999;
+    animation-name:nav-movement;
+    animation-iteration-count:1;
+    animation-timing-function: ease;
+    animation-duration:3s;
 }
+
+@keyframes nav-movement{
+   from{
+    transform:translatex(-100%);
+    opacity:0;
+   }
+   to{
+    transform:translatex(0);
+    opacity:1;
+   }
+}
+
+/* active navigation */
+.active{
+    color:var(--primary);
+}
+
 /* logo design */
 nav h1{
    color:var(--primary);
