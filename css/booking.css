@@ -865,8 +865,12 @@ footer .copyright{
 .to-top a {
     color: var(--light);
 }
-.to-top:hover{
+
+.to-top a:hover{
+    color: var(--primary) !important;
+}
+.to-top:hover {
     transition:ease 1s;
-    color: var(--light) !important;
+    background-color: var(--warning);
 }
 /* <------------- footer container end ------> */
