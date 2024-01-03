@@ -490,7 +490,7 @@ nav input{
 	right: 7px;
 }
 
-@media screen and (max-width:750px){
+@media screen and (max-width:991px){
 	.img-collections{
 		min-height: 1200px;
 		flex-direction: column;
@@ -504,7 +504,7 @@ nav input{
 		height: 250px;
 	}
 	.img4{
-		height:400px
+		height:350px
 	}
 	
 
@@ -533,7 +533,6 @@ nav input{
 	}
 
 }
-
 
 
 /* footer design starts */
