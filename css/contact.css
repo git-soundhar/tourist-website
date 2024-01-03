@@ -86,7 +86,21 @@ nav{
     padding:0px 30px;
     background-color:transparent;
     z-index:9999;
+    animation-name:nav-movement;
+    animation-iteration-count:1;
+    animation-timing-function: ease;
+    animation-duration:3s;
 }
+@keyframes nav-movement{
+    from{
+     transform:translatex(-30%);
+     opacity:0;
+    }
+    to{
+     transform:translatex(0);
+     opacity:1;
+    }
+ }
 /* logo design */
 nav h1{
    color:var(--primary);
@@ -330,9 +344,7 @@ nav input{
 }
 
 /* footer design starts */
-html{
-    font-size:16px;
-}
+/* footer design starts */
 footer{
     background-color:var(--dark);
     padding-top:5rem;
@@ -349,10 +361,14 @@ footer{
 
 /*footer content containd 4 section(contact,company,gallery,newsletter)*/
 /* gallery section design */
-footer .gallery img{
-    height:30%;
-    width:30%;
+footer .gallery div > img{
+    width: 30%;
+    height: 80px;
     border:3px solid var(--light);
+    cursor: pointer;
+}
+footer .gallery div > img:hover{
+    border: 3px solid var(--secondary);
 }
 /* footer>company section designs */
 .company p i{
@@ -361,6 +377,7 @@ footer .gallery img{
 .company p:hover{
    letter-spacing:2px;
    transition:ease 1s;
+   cursor:pointer;
 }
 footer h3{
     padding-bottom:15px;
@@ -387,28 +404,35 @@ footer h3{
 }
 /* footer content > news letter section designs */
 footer .newsletter .footer-search{
-    /* width:100%; */
-    background-color:var(--dark);
     position:relative;
-    background-color:#FE8800;
+    border-radius: 30px;
 }
 .footer-search button{
     position:absolute;
     right:8px;
-    padding:10px;
-    top:13px;
+    padding:4px 10px;
+    top: 8px;
     background-color:var(--primary);
     color:var(--light);
-    border:0;   
+    border: none; 
+    border-radius: 30px; 
+    cursor: pointer; 
 }
 .footer-search input{
     width:100%;
-    padding:20px;
-    border-color:var(--primary);
+    padding:10px;
+    border:3px solid var(--primary);
     outline-color: var(--primary);
-    outline-offset:1px;
-    padding-right:200px;
+    outline:none;
+    padding-right:90px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 4px var(--primary);
+
 }
+.footer-search input:focus{
+    outline: 2px solid var(--primary);
+}
+
 /* footer copy right section designs */
 footer .copyright{
     display:flex;
@@ -429,7 +453,6 @@ footer .copyright{
     footer{
         padding-right:4rem;
         padding-left:4rem;
-        margin-top: 150px;
     }
     .footer-content{
         grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -453,9 +476,29 @@ footer .copyright{
 
 /* copy right section responsive code */
 @media only screen and (max-width:1062px){
-    footer{
-        margin-top: 100px;
+    .copyright{
+        flex-direction:column;
+        gap:10px;
+        align-items:center;
     }
+}
+/* to top button designs */
+.to-top{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    padding:10px 16px;
+    background-color:var(--primary);
+}
+.to-top a {
+    color: var(--light);
+}
+.to-top:hover{
+    transition:ease 1s;
+    color: var(--light) !important;
+}
+/* copy right section responsive code */
+@media only screen and (max-width:1062px){
     .copyright{
         flex-direction:column;
         gap:10px;
@@ -478,6 +521,9 @@ footer .copyright{
     transition:ease 1s;
     color: var(--light) !important;
 }
+
+
+
 
 /*                                middle desing box details container style */
 
