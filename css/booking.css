@@ -269,11 +269,12 @@ nav input{
     }
     .nav-links{
         position:fixed;
-        top:80px;
+        height: 100vh;
         width:100%;
         left:-100%;
+        top:80px;
         transition:all 1s;
-        background-color:var(--secondary); 
+        background-color:var(--dark); 
     }
     .nav-links ul{
         flex-direction:column;
@@ -283,6 +284,7 @@ nav input{
         padding: 10px;
     }
     ul li .dropdown-menu{
+        width: 180px;
         left:110px;
         top:-100px;
         z-index:99;
