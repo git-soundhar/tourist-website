@@ -242,6 +242,9 @@ ul li .dropdown-menu{
 ul li .dropdown-menu a{
     color:var(--dark);
 }
+ul li .dropdown-menu .active{
+	color: var(--primary);
+}
 /* dropdown view during the hovering */
 ul .dropdown-li:hover .dropdown-menu{
     display:block;
@@ -268,6 +271,7 @@ nav input{
     font-size:48px;
     color:var(--light);
     padding:15px 0;
+    font-family: var(--heading-font);
 }
 .banner .bannertext-container h3{
     text-align:center;
