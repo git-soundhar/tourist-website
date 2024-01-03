@@ -510,10 +510,14 @@ footer{
 
 /*footer content containd 4 section(contact,company,gallery,newsletter)*/
 /* gallery section design */
-footer .gallery img{
-    height:30%;
-    width:30%;
+footer .gallery div > img{
+    width: 30%;
+    height: 80px;
     border:3px solid var(--light);
+    cursor: pointer;
+}
+footer .gallery div > img:hover{
+    border: 3px solid var(--secondary);
 }
 /* footer>company section designs */
 .company p i{
