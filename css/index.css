@@ -350,7 +350,246 @@ nav input{
     height:calc(100vh - 80px);
    }
 }
+/* css code for services */
+.servicebox{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    /* border: 5px solid black; */
+    background-color: var(--light);
+    flex-wrap: wrap;
+    font-size: 25px;
+    
+}
+.start h1{
+    text-align:center;
+}
+.b2,.b3,.b4,.b5{
+    background-color:var(--light);
+    width: 300px;
+    height: 260px;
+    /* border: 2px solid var(--dark); */
+    margin: 10px;
+    padding: 20px;
+    border-radius: 7px;
+    font-size: 20px;
+    padding-top: 15px;
+    box-shadow: var(--para);
+    border:1px solid var(--dark);
+    
+}
 
+ p{
+    padding-top: 20px;
+    font-size: large;
+    font-family: var(--content-font);
+ }
+.b2:hover{
+    background-color: var(--primary);
+    color: var(--light);
+}
+.b3:hover{
+    background-color: var(--primary);
+    color: var(--light);
+}
+.b4:hover{
+    background-color: var(--primary);
+    color: var(--light);
+}
+.b5:hover{
+    background-color: var(--primary);
+    color: var(--light);
+   
+}
+@media only screen and (min-width:1020px) and (max-width:1340px) {
+    .b2,.b3,.b4,.b5{
+        width:none;
+
+    }
+    .servicebox{
+        /* background-color:yellow; */
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+        background-color:var(--light) !important;
+    } 
+}
+/* css code for destination */
+.topic-container {
+
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+/* <---- topic container start--------> */
+.topic-container .topic {
+    padding: 0px 10px;
+    color:var(--primary);
+    font-weight: bolder;
+}
+.topic-container .code {
+    background-color: silver;
+    border: 1px solid var(--primary);
+}
+.topic-container .left-side {
+    text-align: right;
+}
+.topic-container .left-side .top,.bottom {
+    float: right;
+}
+.topic-container .top {
+    width: 40px;
+    margin-bottom: 8px;
+}
+.topic-container .bottom {
+    width: 60px;
+}
+/* <--------- topic container end ------> */
+
+
+.destination{
+	padding: 25px;
+}
+
+.destination > h1{
+	text-align: center;
+	padding: 10px;
+}
+.img-collections{
+	width: 100%;
+	height: 70vh;
+	display: flex;
+	gap: 10px;
+	padding: 2px 90px;
+	box-sizing: border-box;
+}
+
+.img-collections1{
+	width: 60%;
+	height: 100%;
+}
+
+.img-collections2{
+	width: 40%;
+	height: 100%;
+}
+
+
+.sub-img{
+	height: 50%;
+}
+
+.sub-img1{
+	display: flex;
+	height: 50%;
+	gap: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.img{
+	position: relative;
+
+	
+}
+
+.img:hover{
+		overflow: hidden;
+	
+}
+.img:hover img{
+	transform: scale(1.1);
+}
+
+
+.img1,.img2,.img3{
+	height: 100%;
+	box-sizing: border-box;
+}
+.img2,.img3{
+	width: 50%;
+}
+
+.img4{
+	width: 100%;
+	height: 100%;
+}
+
+.img img{
+	width: 100%;
+	height: 100%;
+    object-fit:cover;
+	transition: all 2s;
+/*	overflow: hidden;*/
+}
+
+.img span{
+	background-color: var(--light);
+	color: var(--primary);
+	border-radius: 5px;
+	padding: 7px 4px;
+	font-weight: bold;
+	position: absolute;
+}
+
+.img > span:nth-child(2){
+	color: red;
+	top:7px;
+	left: 7px;
+}
+
+.img > span:last-child{
+	bottom:7px;
+	right: 7px;
+}
+
+@media screen and (max-width:991px){
+	.img-collections{
+		min-height: 1200px;
+		flex-direction: column;
+		gap: 10px;
+		padding: 5px 15px;
+	}
+	.img-collections1,.img-collections2{
+		width: 100%;
+	}
+	.sub-img,.img2,.img3{
+		height: 250px;
+	}
+	.img4{
+		height:350px
+	}
+	
+
+}
+@media screen and (max-width:991px){
+	.img-collections{
+		padding: 3px 40px;
+	}
+	.sub-img{
+		height: 30%;
+	}
+
+	.sub-img1{
+		height: 70%;
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	.img2,.img3{
+		width: 100%;
+	}
+	
+	.img-collections2{
+		height: 630px;
+	}
+
+}
+
+/* css code for destination */
 /* css code for packages */
    /* <------------- awesome-container ------------------> */
 .awesom-container {
@@ -370,6 +609,7 @@ nav input{
 /* <---- topic container start--------> */
 .topic-container .topic {
     padding: 0px 10px;
+    padding-top:0 !important;
     color:var(--primary);
     font-weight: bolder;
 }
@@ -915,19 +1155,11 @@ nav input{
 
 /* testimonial start */
 .title{
-    /* height: 100px; */
-    /* background-color: blue; */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* flex-direction: column; */
     font-size: 20px;
     padding-top:10px;
-    /* gap: 20px; */
-
-}
-.topic{
-    margin-top:20px;
 }
 .testimonial-main-container{
     padding:0 90px;
@@ -939,7 +1171,6 @@ nav input{
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:20px;
     align-items:center;
-
 }
 /*newly  added*/
 .review-container{
@@ -947,9 +1178,9 @@ nav input{
      /* height:400px; */
      border-radius:10px;
      box-shadow:5px 5px 10px var(--para);
-     overflow:hidden;
-     min-height:300px;
+     width:100%;
      padding: 25px;
+     height:100%;
 
 }
 .review-container .customer-reference{
@@ -1335,10 +1566,19 @@ footer .copyright{
 .guide-card{
     position: relative;
     line-height: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .guide-card img{
     width:100%;
    
+}
+.guide-card:hover img{
+    cursor:zoom-in;
+    transform:scaleY(1.1);
+    overflow:hidden;
+    transition:all 0.5s;
+    z-index:-1;
+    background-color:var(--para);
 }
 
 .travel-icon{    
@@ -1349,7 +1589,7 @@ footer .copyright{
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:10px;
+    gap:20px;
    
 
 }
@@ -1359,7 +1599,8 @@ footer .copyright{
     color: var(--primary);
     border-bottom: 2px solid var(--primary);
     border-radius: 50%;
-    margin-left: 5px;
+    background-color:var(--light);
+    padding:10px;
     
 }
 
@@ -1387,12 +1628,6 @@ footer .copyright{
     }
     .topic{
         margin-top:20px;
-    }
-    .travel-guide{
-        display: grid;
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-        padding:0 35px;
-        
     }
 }
 
@@ -1449,8 +1684,9 @@ footer .copyright{
 
     .travel-guide{
         display: grid;
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
         padding:0 35px;
+        column-gap:100px;
         
     }
 }
