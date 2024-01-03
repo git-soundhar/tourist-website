@@ -321,6 +321,7 @@ nav input{
     height:calc(100vh - 80px);
    }
 }
+/* testimonials starts here */
 /* testimonial start */
 .topic{
     display: flex;
@@ -360,49 +361,55 @@ nav input{
 }
 
 /* testimonial start */
-.container{
-    width: 300px;
-    height: 100px;
-    /* background-color: blue; */
-    margin: 20px auto;
+.title{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     font-size: 20px;
-    gap: 20px;
-
+    padding-top:10px;
+}
+.testimonial-main-container{
+    padding:0 90px;
 }
 .testimonial-box{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    /* padding: 40px; */
-    margin: 50px;
-    /* column-gap: 20px; */
+    width:100%;
+    padding:20px 10px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+    align-items:center;
+}
+/*newly  added*/
+.review-container{
+     background-color:var(--light);
+     /* height:400px; */
+     border-radius:10px;
+     box-shadow:5px 5px 10px var(--para);
+     width:100%;
+     padding: 25px;
+     height:100%;
 
-
+}
+.review-container .customer-reference{
+    width:100%;
+    text-align:center;
+    margin-bottom:10px;
+}
+.review-container button{
+    padding:2px;
+    margin-top:5px;
+}
+.customer-reference h3{
+    padding-top:10px;
 }
 .testimonial-box img{
     border-radius: 50%;
-    margin:  auto;
-
-    
+    margin:  auto;  
 }
-.headerp1{
+/* .header .p1{
     color: var(--primary);
-    
-}
-.img1,.img2,.img3,.img4{
-    /* border: 2px solid black; */
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-    margin: 20px;
+} */
 
-}
 .testimonial-box h4{
     padding-bottom: 20px;
     font-family: var(--content-font);
@@ -412,45 +419,21 @@ nav input{
     font-family: var(--heading-font);
 
 }
-:hover.img1{
+
+.review-container:hover{
     background-color: var(--primary);
     color: var(--light);
+    transition:all 1s;
 }
 
-:hover.img2{
-    background-color: var(--primary);
-    color: var(--light);
-}
-:hover.img3{
-    background-color:var(--primary);
-    color:var(--light);
-
-}
-:hover.img4{
-    background-color: var(--primary);
-    color: var(--light);
-
-}
-:hover div img{
-    border: 5px solid var(--light);
-}
 /* testimonial mediaquerry */
-
-@media only screen and (min-width:317px) and (max-width:1005px){
-    .testimonial-box{
-        display:grid;   
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+@media only screen and (max-width:520px){
+    .testimonial-main-container{
+        padding:0;
     }
 }
 
-@media only screen and (min-width:700px) and (max-width:1440px){
-    .testimonial-box{
-        /* flex-wrap: wrap; */
-        display:grid;
-        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-        
-    }
-}
+/* testimonials ends here */
 /* footer */
 /* footer design starts */
 html{
