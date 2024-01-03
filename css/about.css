@@ -95,7 +95,7 @@ nav{
 }
 @keyframes nav-movement{
    from{
-    transform:translatex(-100%);
+    transform:translatex(-30%);
     opacity:0;
    }
    to{
