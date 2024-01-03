@@ -9,6 +9,32 @@
 	font-family:var(--content-font);
 }
 
+
+/* <------ scroll bar -----> */
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(227, 226, 226);
+    border-radius: 20px;
+
+}
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+    background: rgb(179, 175, 175);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
+
+
 html{
     scroll-behavior: smooth;
 }
