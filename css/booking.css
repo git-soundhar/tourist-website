@@ -25,6 +25,29 @@ html{
 h1,h2,h3,h4,h5,h6{
     font-family:var(--heading-font);
 }
+/* <------ scroll bar -----> */
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(227, 226, 226);
+    border-radius: 20px;
+
+}
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+    background: rgb(179, 175, 175);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
 /* <----------- ovaerall booking style page start */
 /* <---- navbar container start----------> */
 /* styles for header section */
@@ -187,7 +210,7 @@ ul li .dropdown-menu{
     position:absolute;
     top:40px;
     left:-20px;
-    width:150px;
+    width:200px;
     display:none;
 }
 
@@ -215,6 +238,7 @@ nav input{
 }
 
 /* media query for responsive navigation bar */
+
 @media only screen and (max-width:1033px){
     nav .bar-menu,nav label{
         display:inline-block;
@@ -237,11 +261,12 @@ nav input{
         flex-direction:column;
         justify-content:center;
         align-items:center;
-        gap:20px;
+        gap:5px;
+        padding: 10px;
     }
     ul li .dropdown-menu{
-        left:100px;
-        top:5px;
+        left:110px;
+        top:-100px;
         z-index:99;
         background-color:rgba(128, 128, 128,0.4); 
     }
@@ -279,6 +304,16 @@ nav input{
    .banner .bannertext-container{
     height:calc(100vh - 80px);
    }
+}
+@media only screen and (max-width:420px) {
+    .nav-links ul{
+        list-style-type:none;
+        display:flex;
+        justify-content: start;
+        align-items: start;
+        gap:5px;
+        padding:10px 10px;   
+    }   
 }
 /* <---- navbar container end----------> */
 .topic-container {
@@ -396,6 +431,7 @@ nav input{
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
+    padding-bottom: 80px;
 }
 .booking-container header {
     width: 90%;

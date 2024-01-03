@@ -9,6 +9,32 @@
 	font-family:var(--content-font);
 }
 
+
+/* <------ scroll bar -----> */
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(227, 226, 226);
+    border-radius: 20px;
+
+}
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+    background: rgb(179, 175, 175);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -334,6 +360,7 @@ nav input{
 }
 
 
+/* <---- topic container start--------> */
 
 .topic-container {
 
@@ -344,7 +371,7 @@ nav input{
     align-items: center;
     margin: auto;
 }
-/* <---- topic container start--------> */
+
 .topic-container .topic {
     padding: 0px 10px;
     color:var(--primary);
@@ -369,7 +396,7 @@ nav input{
 }
 /* <--------- topic container end ------> */
 
-
+/*destination styles start*/
 .destination{
 	padding: 25px;
 }
@@ -377,6 +404,7 @@ nav input{
 .destination > h1{
 	text-align: center;
 	padding: 10px;
+	font-family: var(--heading-font);
 }
 .img-collections{
 	width: 100%;
@@ -412,7 +440,6 @@ nav input{
 .img{
 	position: relative;
 
-	
 }
 
 .img:hover{
@@ -440,8 +467,8 @@ nav input{
 .img img{
 	width: 100%;
 	height: 100%;
-/*	transition: all 2s;*/
-/*	overflow: hidden;*/
+	object-fit:cover;
+	transition: all 2s;
 }
 
 .img span{
@@ -464,7 +491,7 @@ nav input{
 	right: 7px;
 }
 
-@media screen and (max-width:750px){
+@media screen and (max-width:991px){
 	.img-collections{
 		min-height: 1200px;
 		flex-direction: column;
@@ -478,7 +505,7 @@ nav input{
 		height: 250px;
 	}
 	.img4{
-		height:400px
+		height:350px
 	}
 	
 
@@ -508,7 +535,7 @@ nav input{
 
 }
 
-
+/*destination styles ends*/
 
 /* footer design starts */
 html{
@@ -530,11 +557,16 @@ footer{
 
 /*footer content containd 4 section(contact,company,gallery,newsletter)*/
 /* gallery section design */
-footer .gallery img{
-    height:30%;
-    width:30%;
+footer .gallery div > img{
+    width: 30%;
+    height: 80px;
     border:3px solid var(--light);
+    cursor: pointer;
 }
+footer .gallery div > img:hover{
+    border: 3px solid var(--secondary);
+}
+
 /* footer>company section designs */
 .company p i{
    padding-right:5px;
@@ -568,27 +600,33 @@ footer h3{
 }
 /* footer content > news letter section designs */
 footer .newsletter .footer-search{
-    /* width:100%; */
-    background-color:var(--dark);
     position:relative;
-    background-color:#FE8800;
+    border-radius: 30px;
 }
 .footer-search button{
     position:absolute;
     right:8px;
-    padding:10px;
-    top:13px;
+    padding:4px 10px;
+    top: 8px;
     background-color:var(--primary);
     color:var(--light);
-    border:0;   
+    border: none; 
+    border-radius: 30px; 
+    cursor: pointer; 
 }
 .footer-search input{
     width:100%;
-    padding:20px;
-    border-color:var(--primary);
+    padding:10px;
+    border:3px solid var(--primary);
     outline-color: var(--primary);
-    outline-offset:1px;
-    padding-right:200px;
+    outline:none;
+    padding-right:90px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 4px var(--primary);
+
+}
+.footer-search input:focus{
+    outline: 2px solid var(--primary);
 }
 /* footer copy right section designs */
 footer .copyright{
@@ -604,6 +642,80 @@ footer .copyright{
 }
 .copyright .bord-unset{
     border:unset;
+}
+
+/* responsive code for footer */
+@media only screen and (max-width:768px){
+    footer{
+        padding-right:4rem;
+        padding-left:4rem;
+    }
+    .footer-content{
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        row-gap:20px;
+        column-gap:20px;
+        text-align:left;
+    }
+}
+@media only screen and (max-width:325px){
+    footer{
+        padding-right:2rem;
+        padding-left:2rem;
+    }
+    .footer-content{
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        row-gap:20px;
+        column-gap:20px;
+        text-align:left;
+    }
+}
+
+/* copy right section responsive code */
+@media only screen and (max-width:1062px){
+    .copyright{
+        flex-direction:column;
+        gap:10px;
+        align-items:center;
+    }
+}
+/* to top button designs */
+.to-top{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    padding:10px 16px;
+    background-color:var(--primary);
+}
+.to-top a {
+    color: var(--light);
+}
+.to-top:hover{
+    transition:ease 1s;
+    color: var(--light) !important;
+}
+/* copy right section responsive code */
+@media only screen and (max-width:1062px){
+    .copyright{
+        flex-direction:column;
+        gap:10px;
+        align-items:center;
+    }
+}
+/* to top button designs */
+.to-top{
+    background-color:var(--secondary);
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+}
+.to-top:hover{
+    background-color:var(--primary);
+    transition:ease 1s;
+    color: var(--light) !important;
 }
 
 

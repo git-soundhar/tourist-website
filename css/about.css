@@ -220,25 +220,7 @@ nav input{
     color:var(--light);
     padding:15px 0;
 }
-.banner .bannertext-container h3{
-    text-align:center;
-    color:var(--light);
-    padding:10px;
-}
-.bannertext-container .searchbox-container{
-   width:100%;
-   /* background-color:var(--primary); */
-  display:flex;
-  justify-content:center;
-  padding:10px;
-}
-/* style for search input container */
-.bannertext-container .search-box{
-    text-align:center;
-    position:relative;
-    width:100%;
-    text-align:center;
-}
+
 /* style for search input */
 .search-box input[type="search"]{
     width:100%;
@@ -331,9 +313,6 @@ nav input{
    }
 }
 /* footer design starts */
-html{
-    font-size:16px;
-}
 footer{
     background-color:var(--dark);
     padding-top:5rem;
@@ -350,10 +329,14 @@ footer{
 
 /*footer content containd 4 section(contact,company,gallery,newsletter)*/
 /* gallery section design */
-footer .gallery img{
-    height:30%;
-    width:30%;
+footer .gallery div > img{
+    width: 30%;
+    height: 80px;
     border:3px solid var(--light);
+    cursor: pointer;
+}
+footer .gallery div > img:hover{
+    border: 3px solid var(--secondary);
 }
 /* footer>company section designs */
 .company p i{
@@ -362,6 +345,7 @@ footer .gallery img{
 .company p:hover{
    letter-spacing:2px;
    transition:ease 1s;
+   cursor:pointer;
 }
 footer h3{
     padding-bottom:15px;
@@ -388,28 +372,35 @@ footer h3{
 }
 /* footer content > news letter section designs */
 footer .newsletter .footer-search{
-    /* width:100%; */
-    background-color:var(--dark);
     position:relative;
-    background-color:#FE8800;
+    border-radius: 30px;
 }
 .footer-search button{
     position:absolute;
     right:8px;
-    padding:10px;
-    top:13px;
+    padding:4px 10px;
+    top: 8px;
     background-color:var(--primary);
     color:var(--light);
-    border:0;   
+    border: none; 
+    border-radius: 30px; 
+    cursor: pointer; 
 }
 .footer-search input{
     width:100%;
-    padding:20px;
-    border-color:var(--primary);
+    padding:10px;
+    border:3px solid var(--primary);
     outline-color: var(--primary);
-    outline-offset:1px;
-    padding-right:200px;
+    outline:none;
+    padding-right:90px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 4px var(--primary);
+
 }
+.footer-search input:focus{
+    outline: 2px solid var(--primary);
+}
+
 /* footer copy right section designs */
 footer .copyright{
     display:flex;
@@ -461,22 +452,52 @@ footer .copyright{
 }
 /* to top button designs */
 .to-top{
-    background-color:var(--secondary);
     position:fixed;
-    right:10px;
-    bottom:10px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:10px;
+    right:20px;
+    bottom:20px;
+    padding:10px 16px;
+    background-color:var(--primary);
+}
+.to-top a {
+    color: var(--light);
 }
 .to-top:hover{
-    background-color:var(--primary);
     transition:ease 1s;
     color: var(--light) !important;
 }
+/* <------------- footer container end ------> */
 
-/* about paage css code */
+                    /* about paage css code */
+
+/* active navigation */
+.active{
+    color:var(--primary);}
+
+/* <------ scroll bar -----> */
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(227, 226, 226);
+    border-radius: 20px;
+
+}
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+    background: rgb(179, 175, 175);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
+/* scroll bar styles end */
+
 /* about us page styles starts here */
 .about-container{
     width:100%;
@@ -586,6 +607,7 @@ footer .copyright{
     border: none;
 
 }
+            /* travel container styles starts */
 
 .travel-container{
     text-align: center;
@@ -604,16 +626,12 @@ footer .copyright{
 }
 
 .travel-guide{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: center;
-    gap: 20px;
-    padding:0 90px;
-}
-
-.travel-guide img{
-    width:300px;
-    height:320px;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 20px;
+   padding: 0 90px;
 }
 
 .guide-card h3{
@@ -621,8 +639,8 @@ footer .copyright{
 }
 
 #guide{
-    background-color:var(--para);
     width:100%;
+    padding-bottom: 10px;
     background-color:beige;
 }
 
@@ -631,35 +649,34 @@ footer .copyright{
     position: relative;
     line-height: 25px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width:300px
+}
+
+.guide-card img{
+    width: 100%;
 }
 
 .guide-card .guide-image{
-    width:100%;
-    height: 350px;
-    overflow: hidden;   
+    height: 300px;
+    overflow: hidden;  
 }
 
 .guide-card .guide-image>img{
-    width: 100%;
-    height:100%;
-    transition: 2s all;
+    transition: 1s all;
 }
 
-.guide-card:hover >.guide-image {
-    transform: scale(0.9);
+.guide-card:hover >.guide-image img {
+    transform: scale(1.1);
     cursor: zoom-in;}
 
 .travel-icon{    
     position: absolute;
     bottom: 65px;
     width:100%;
-    left:0;
     display:flex;
     justify-content:center;
     align-items:center;
     gap:10px;
-   
-
 }
 
 .travel-icon i{
@@ -677,6 +694,44 @@ footer .copyright{
     background-color: var(--primary);
     color: var(--light);
 }
+
+/* travel guides responsive code */
+@media only screen and (min-width:1441px) and (max-width:2560px){
+    .travel-icon{
+        width:100%;
+        left:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:10px;
+    }
+    .travel-guide img{
+        width:100%;
+        height:320px;
+    }
+    
+}
+
+/* travel guides responsive code */
+@media only screen and (min-width:992px) and (max-width:1440px){
+    .guide-card{
+        width:none;
+    }
+    .travel-icon{
+        width:100%;
+        left:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:10px;
+    }
+    .travel-guide img{
+        width:100%;
+        height:320px;
+    }
+    
+}
+
 
 /* media query for responsive div */
 
@@ -698,19 +753,12 @@ footer .copyright{
     .topic{
         margin-top:20px;
     }
-    .travel-guide{
-        display: grid;
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-        padding:0 35px;
-        
-    }
 }
 
-/* media query for responsive about-image */
-@media only screen and (max-width:568px){
+@media only screen and (min-width:750px) and (max-width:800px){
     .travel-guide{
         display: grid;
-        grid-template-columns: auto;        
+        grid-template-columns: auto auto;
     }
 }
 
@@ -722,84 +770,23 @@ footer .copyright{
     }
 
 }
-/* travel guides responsive code */
-@media only screen and (min-width:992px) and (max-width:1024px){
-    .guide-card{
-        width:none;
-    }
-    .travel-icon{
-        width:100%;
-        left:0;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        gap:10px;
-    }
+
+@media only screen and (max-width:488px){
     .travel-guide img{
         width:100%;
         height:320px;
     }
-    .travel-guide{
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    }
-}
 
-/* responsive for 4k */
-@media only screen and (max-width:991px){
-    .about-container{
-        flex-direction: column;
-        padding:0 40px;
-    }
-    .about-image{
-        width:100%;
-    }
-    .about-image img{
-        width:100%;
-    }
-    .about-des{
-        width: 100%;
-    }
-
-    .travel-guide{
-        display: grid;
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-        padding:0 35px;
+    .guide-card img{
+        width: 300px;
         
     }
-}
 
-/* media query for responsive about-image */
-@media only screen and (max-width:568px){
     .travel-guide{
-        display: grid;
-        grid-template-columns: auto;        
-    }
-}
-
-/* media query for responsive about-packages */
-@media only screen and (max-width:520px) {
-
-    .about-packages{
-        grid-template-columns: auto;
+        width:100%
     }
 
+    
 }
-/* travel guides responsive code */
-@media only screen and (min-width:1441px) and (max-width:2560px){
-    .travel-icon{
-        width:100%;
-        left:0;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        gap:10px;
-    }
-    .travel-guide img{
-        width:100%;
-        height:320px;
-    }
-    .travel-guide{
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    }
-}
+
 
