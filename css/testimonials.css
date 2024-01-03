@@ -35,6 +35,9 @@
 /* <---- navbar container start----------> */
 /* styles for header section */
 /* top-bar styles */
+.active{
+    color: var(--primary);
+}
 html{
     scroll-behavior: smooth;
 }
