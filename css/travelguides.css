@@ -87,7 +87,20 @@ nav{
     height:80px;
     padding:0px 30px;
     background-color:transparent;
-    z-index:9999;
+    z-index:9999;animation-name:nav-movement;
+    animation-iteration-count:1;
+    animation-timing-function: ease;
+    animation-duration:3s;
+}
+@keyframes nav-movement{
+   from{
+    transform:translatex(-30%);
+    opacity:0;
+   }
+   to{
+    transform:translatex(0);
+    opacity:1;
+   }
 }
 /* logo design */
 nav h1{
@@ -238,7 +251,7 @@ nav input{
         width:100%;
         left:-100%;
         transition:all 1s;
-        background-color:var(--secondary); 
+        background-color:var(--dark); 
     }
     .nav-links ul{
         flex-direction:column;
@@ -442,7 +455,7 @@ footer .copyright{
 }
 /* <------------- footer container end ------> */
 
-                    /* about paage css code */
+                    /* travelguide paage css code */
 
 /* active navigation */
 .active{
