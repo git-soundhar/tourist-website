@@ -18,6 +18,9 @@
     --heading-font:'Nunito', sans-serif;
     --content-font: 'Poppins', sans-serif;
 }
+.active{
+    color: var(--primary);
+}
 html{
     scroll-behavior: smooth;
 }
