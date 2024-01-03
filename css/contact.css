@@ -1,18 +1,13 @@
-/*                  nunito sans serief font family for whole website */
-@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
-
+/* nunito sans serief font family only for heading tag in website website */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
 /* poopins fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-/*                                over all web main container style          */
-
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
     font-family:var(--content-font);
 }
-
 html{
     scroll-behavior: smooth;
 }
@@ -23,7 +18,7 @@ html{
     --light: #F5F5F5;
     --dark: #14141F;
     --heading-font:'Nunito', sans-serif;
-    --content-font:'Poppins', sans-serif;
+    --content-font: 'Poppins', sans-serif;
     --para:#808080;
 }
 /* font styles for heading tag */
@@ -41,7 +36,7 @@ header .top-bar{
     justify-content:space-between;
     align-items:center;
     padding:0 3em; 
-    height:40px;
+    height:50px;
 }
 /* left-side address area in top bar */
 .top-bar small i{
@@ -65,7 +60,7 @@ header .top-bar{
 
 /* navigation  bar and banner styles starts */
 .banner{
-    height:80vh;
+    height:100vh;
     width:100%;
     background:linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)),url('../images/bg-hero.jpg');
     background-position:center;
@@ -73,12 +68,11 @@ header .top-bar{
     background-size:cover;
 }
 
-.banner-text p{
-    color: var(--light);
-    text-align: center;
+.banner-text span{
+    color:var(--primary)
 }
-.banner-text p span{
-    color: var(--primary);
+.banner-text p{
+    color: white;
 }
 
 /* navigation bar styles */
